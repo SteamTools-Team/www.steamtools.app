@@ -15,13 +15,18 @@
 </head>
 
 <body>
-
+  <div class="bg-glow"></div>
+  <div class="bg-grid"></div>
   <!-- Navbar — pleine largeur, sticky -->
   <nav class="nav">
     <a class="nav-brand" href="#">
       <img src="assets/fav.ico" alt="" class="nav-logo" aria-hidden="true" />
       <span class="nav-name">SteamTools</span>
     </a>
+    <div class="nav-links">
+      <a class="nav-link" href="https://manilua.steamtools.app" target="_blank" rel="noopener">Manifest</a>
+      <a class="nav-link" href="https://shop.steamtools.app" target="_blank" rel="noopener">Get Premium</a>
+    </div>
     <div class="nav-right">
       <a class="nav-icon-btn" href="https://github.com/SteamTools-Team" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -149,14 +154,89 @@
     document.addEventListener('DOMContentLoaded', getGamesCount);
   </script>
 
+  <!-- Premium modal -->
+  <div class="premium-overlay" id="premium-overlay">
+    <div class="premium-modal">
+      <button class="premium-modal-close" id="premium-close" aria-label="Fermer">&times;</button>
+      <div class="premium-modal-title">Passez <span>Premium</span></div>
+      <ul class="premium-modal-list">
+        <li><strong>Update Manifest</strong> — derniers manifests avec mises à jour instantanées</li>
+        <li><strong>Accès complet au Bot</strong> — toutes les commandes SteamTools Bot</li>
+        <li><strong>Performances accrues</strong> et limites plus élevées</li>
+        <li><strong>Téléchargements illimités</strong> (Tier 2)</li>
+        <li><strong>Accès prioritaire</strong> aux futures mises à jour</li>
+        <li><strong>Fonctionnalités exclusives</strong> réservées aux Premium</li>
+        <li><strong>Support Premium</strong> et assistance plus rapide</li>
+        <li><strong>Nouveaux avantages</strong> ajoutés régulièrement</li>
+      </ul>
+      <ul class="premium-modal-sub">
+        <li>Sans abonnement — paiement unique</li>
+        <li>Supprimez les limites et temps d'attente</li>
+      </ul>
+      <a class="premium-modal-btn" href="https://shop.steamtools.app" target="_blank" rel="noopener">Obtenir Premium</a>
+      <div class="premium-modal-footer">Paiement unique · Accès à vie</div>
+      <div class="premium-modal-dl" id="premium-dl-state">
+        <div class="spinner"></div>
+        <div class="premium-modal-dl-text">Téléchargement en cours…</div>
+      </div>
+    </div>
+  </div>
+
   <script>
-    document.getElementById('portable-download').addEventListener('click', function () {
-      const link = document.createElement('a');
-      link.href = 'https://github.com/SteamTools-Team/Config/raw/refs/heads/main/SteamTools.exe';
-      link.download = 'SteamTools.exe';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+    document.addEventListener('DOMContentLoaded', function () {
+      var overlay = document.getElementById('premium-overlay');
+      var closeBtn = document.getElementById('premium-close');
+      var canClose = false;
+      var pendingDownload = false;
+
+      function startDownload() {
+        var link = document.createElement('a');
+        link.href = 'https://github.com/SteamTools-Team/Config/raw/refs/heads/main/SteamTools.exe';
+        link.download = 'SteamTools.exe';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+
+      document.getElementById('portable-download').addEventListener('click', function () {
+        var cookie = document.cookie.split('; ').find(function (r) { return r.startsWith('premium_pop='); });
+        if (cookie) { startDownload(); return; }
+        pendingDownload = true;
+        document.querySelectorAll('.premium-modal > :not(.premium-modal-close):not(.premium-modal-dl)').forEach(function (el) { el.style.display = ''; });
+        document.getElementById('premium-dl-state').classList.remove('show');
+        overlay.classList.add('show');
+        var secondsLeft = 4;
+        closeBtn.textContent = secondsLeft + 's';
+        closeBtn.className = 'premium-modal-close countdown';
+        var timer = setInterval(function () {
+          secondsLeft--;
+          if (secondsLeft > 0) closeBtn.textContent = secondsLeft + 's';
+          else { clearInterval(timer); closeBtn.textContent = '\u00D7'; closeBtn.className = 'premium-modal-close ready'; canClose = true; }
+        }, 1000);
+      });
+
+      function closePopup() {
+        if (!canClose) return;
+        if (pendingDownload) {
+          pendingDownload = false;
+          document.querySelector('.premium-modal > :not(.premium-modal-close):not(.premium-modal-dl)').style.display = 'none';
+          document.getElementById('premium-dl-state').classList.add('show');
+          setTimeout(function () {
+            overlay.classList.remove('show');
+            startDownload();
+            var d = new Date();
+            d.setTime(d.getTime() + 24 * 60 * 60 * 1000);
+            document.cookie = 'premium_pop=1; expires=' + d.toUTCString() + '; path=/';
+          }, 800);
+        } else {
+          overlay.classList.remove('show');
+        }
+      }
+
+      closeBtn.addEventListener('click', closePopup);
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closePopup();
+      });
     });
   </script>
 
