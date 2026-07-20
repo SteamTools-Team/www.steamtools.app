@@ -19,7 +19,7 @@
     { "source": "/discord", "destination": "https://discord.com/invite/steamtoolsapp", "permanent": true },
     { "source": "/discord/", "destination": "https://discord.com/invite/steamtoolsapp", "permanent": true },
 
-    { "source": "/shop", "destination": "https://manilua.steamtools.app/premium", "permanent": false },
-    { "source": "/shop/", "destination": "https://manilua.steamtools.app/premium", "permanent": false }
+    { "source": "/shop", "destination": "https://shop.steamtools.app", "permanent": false },
+    { "source": "/shop/", "destination": "https://shop.steamtools.app", "permanent": false }
   ]
 }
