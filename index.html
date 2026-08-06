@@ -9,6 +9,21 @@
   <link rel="canonical" href="https://steamtools.ayka.dev/">
   <link rel="alternate" href="https://steamtools.ayka.dev/en-EN/" hreflang="en" />
   <link rel="alternate" href="https://steamtools.ayka.dev/fr-FR/" hreflang="fr" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/zh-CN/" hreflang="zh-CN" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/es-ES/" hreflang="es" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/hi-IN/" hreflang="hi" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/ar-AR/" hreflang="ar" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/pt-BR/" hreflang="pt" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/ru-RU/" hreflang="ru" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/ja-JP/" hreflang="ja" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/de-DE/" hreflang="de" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/ko-KR/" hreflang="ko" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/vi-VN/" hreflang="vi" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/tr-TR/" hreflang="tr" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/it-IT/" hreflang="it" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/pl-PL/" hreflang="pl" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/nl-NL/" hreflang="nl" />
+  <link rel="alternate" href="https://steamtools.ayka.dev/id-ID/" hreflang="id" />
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SteamTools">
   <meta property="og:title" content="SteamTools | Official Download">
@@ -27,7 +42,7 @@
       "name": "SteamTools",
       "url": "https://steamtools.ayka.dev/",
       "alternateName": "SteamTools Download",
-      "inLanguage": ["en", "fr"],
+      "inLanguage": ["en", "fr", "zh", "es", "hi", "ar", "pt", "ru", "ja", "de", "ko", "vi", "tr", "it", "pl", "nl", "id"],
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://steamtools.ayka.dev/?q={search_term_string}",
@@ -36,7 +51,7 @@
     }
   </script>
   <script>
-    const s=localStorage.getItem("l");if(s){location.replace(`/${s}/`)}else{const b=(navigator.languages||[navigator.language||"en"])[0].substring(0,2).toLowerCase();const l=["fr","be","ch"].includes(b)?"fr-FR":"en-EN";localStorage.setItem("l",l);location.replace(`/${l}/`)}
+    const s=localStorage.getItem("l");if(s){location.replace(`/${s}/`)}else{const b=(navigator.languages||[navigator.language||"en"])[0].substring(0,2).toLowerCase();const m={fr:"fr-FR",be:"fr-FR",ch:"fr-FR",en:"en-EN",es:"es-ES",zh:"zh-CN",hi:"hi-IN",ar:"ar-AR",pt:"pt-BR",ru:"ru-RU",ja:"ja-JP",de:"de-DE",ko:"ko-KR",vi:"vi-VN",tr:"tr-TR",it:"it-IT",pl:"pl-PL",nl:"nl-NL",id:"id-ID"};const l=m[b]||"en-EN";localStorage.setItem("l",l);location.replace(`/${l}/`)}
   </script>
 </head>
 <body>
@@ -67,20 +82,35 @@
       <h2>Frequently asked questions</h2>
       <p><strong>Is SteamTools safe?</strong> Yes, downloads are verified and delivered from the official GitHub-hosted binaries.</p>
       <p><strong>Does SteamTools support portable mode?</strong> Yes, you can run it without installation using the portable build.</p>
-      <p><strong>Which languages are available?</strong> English and French versions are auto-detected and loaded for you.</p>
+      <p><strong>Which languages are available?</strong> 17 languages are auto-detected and loaded for you: English, French, Chinese, Spanish, Hindi, Arabic, Portuguese, Russian, Japanese, German, Korean, Vietnamese, Turkish, Italian, Polish, Dutch, and Indonesian.</p>
     </section>
 
     <section>
       <h2>Quick links</h2>
       <ul>
-        <li><a href="https://steamtools.ayka.dev/en-EN/">SteamTools download in English</a></li>
-        <li><a href="https://steamtools.ayka.dev/fr-FR/">SteamTools telechargement en francais</a></li>
+        <li><a href="/en-EN/">English</a></li>
+        <li><a href="/fr-FR/">Français</a></li>
+        <li><a href="/zh-CN/">中文</a></li>
+        <li><a href="/es-ES/">Español</a></li>
+        <li><a href="/hi-IN/">हिन्दी</a></li>
+        <li><a href="/ar-AR/">العربية</a></li>
+        <li><a href="/pt-BR/">Português</a></li>
+        <li><a href="/ru-RU/">Русский</a></li>
+        <li><a href="/ja-JP/">日本語</a></li>
+        <li><a href="/de-DE/">Deutsch</a></li>
+        <li><a href="/ko-KR/">한국어</a></li>
+        <li><a href="/vi-VN/">Tiếng Việt</a></li>
+        <li><a href="/tr-TR/">Türkçe</a></li>
+        <li><a href="/it-IT/">Italiano</a></li>
+        <li><a href="/pl-PL/">Polski</a></li>
+        <li><a href="/nl-NL/">Nederlands</a></li>
+        <li><a href="/id-ID/">Bahasa Indonesia</a></li>
       </ul>
       <p>Need help? Join the community on Discord via the links on the language pages.</p>
     </section>
 
     <noscript>
-      JavaScript is required for automatic redirection. Please open <a href="/en-EN/">/en-EN/</a> or <a href="/fr-FR/">/fr-FR/</a>.
+      JavaScript is required for automatic redirection. Please choose your language: <a href="/en-EN/">English</a>, <a href="/fr-FR/">Français</a>, <a href="/zh-CN/">中文</a>, <a href="/es-ES/">Español</a>, <a href="/hi-IN/">हिन्दी</a>, <a href="/ar-AR/">العربية</a>, <a href="/pt-BR/">Português</a>, <a href="/ru-RU/">Русский</a>, <a href="/ja-JP/">日本語</a>, <a href="/de-DE/">Deutsch</a>, <a href="/ko-KR/">한국어</a>, <a href="/vi-VN/">Tiếng Việt</a>, <a href="/tr-TR/">Türkçe</a>, <a href="/it-IT/">Italiano</a>, <a href="/pl-PL/">Polski</a>, <a href="/nl-NL/">Nederlands</a>, <a href="/id-ID/">Bahasa Indonesia</a>.
     </noscript>
   </main>
 </body>
