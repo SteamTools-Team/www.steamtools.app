@@ -1,32 +1,67 @@
-$url = "https://github.com/Selectively11/CloudRedirect/releases/latest/download/CloudRedirectCLI.exe"
-$out = "$env:TEMP\CloudRedirectCLI.exe"
+$ErrorActionPreference = "Stop"
 
-Write-Host "Downloading CloudRedirectCLI..." -ForegroundColor Cyan
+Write-Host ""
+Write-Host "========================================" -ForegroundColor Cyan
+Write-Host "       CloudRedirect STFixer" -ForegroundColor Cyan
+Write-Host "========================================" -ForegroundColor Cyan
+Write-Host ""
+
+$out = "$env:TEMP\CloudRedirect.exe"
+$api = "https://api.github.com/repos/Selectively11/CloudRedirect/releases/latest"
+
+Write-Host "Getting latest CloudRedirect release..." -ForegroundColor Yellow
 
 try {
-    Invoke-WebRequest -Uri $url -OutFile $out -UseBasicParsing -ErrorAction Stop
+    $release = Invoke-RestMethod -Uri $api -Headers @{
+        "User-Agent" = "CloudRedirect-Installer"
+    }
+
+    $asset = $release.assets |
+        Where-Object {
+            $_.name -match '\.exe$' -and
+            $_.name -notmatch 'linux'
+        } |
+        Select-Object -First 1
+
+    if (-not $asset) {
+        throw "No Windows EXE was found in the latest GitHub release."
+    }
+
+    Write-Host "Found: $($asset.name)" -ForegroundColor Green
+    Write-Host "Downloading CloudRedirect..." -ForegroundColor Yellow
+
+    & curl.exe -L --fail --silent --show-error `
+        "$($asset.browser_download_url)" `
+        -o "$out"
+
+    if ($LASTEXITCODE -ne 0) {
+        throw "Download failed with exit code $LASTEXITCODE"
+    }
+
+    if (-not (Test-Path $out)) {
+        throw "The downloaded file does not exist."
+    }
+
+    $size = (Get-Item $out).Length
+
+    if ($size -lt 10000) {
+        Remove-Item $out -Force -ErrorAction SilentlyContinue
+        throw "The downloaded file is too small ($size bytes)."
+    }
+
+    Write-Host "Download completed successfully." -ForegroundColor Green
+    Write-Host "Launching STFixer..." -ForegroundColor Cyan
+    Write-Host ""
+
+    & $out /stfixer
+
+    Write-Host ""
+    Write-Host "CloudRedirect STFixer finished." -ForegroundColor Green
 }
 catch {
-    Write-Host "Download error:" -ForegroundColor Red
+    Write-Host ""
+    Write-Host "ERROR:" -ForegroundColor Red
     Write-Host $_.Exception.Message -ForegroundColor Red
-    exit 1
+    Write-Host ""
+    Read-Host "Press Enter to exit"
 }
-
-if (-not (Test-Path $out)) {
-    Write-Host "The file was not downloaded." -ForegroundColor Red
-    exit 1
-}
-
-$size = (Get-Item $out).Length
-Write-Host "Downloaded file size: $size bytes" -ForegroundColor Yellow
-
-if ($size -lt 10000) {
-    Write-Host "The downloaded file appears to be invalid or incomplete." -ForegroundColor Red
-    Write-Host "The program will not be executed." -ForegroundColor Red
-    exit 1
-}
-
-Write-Host "Download completed successfully." -ForegroundColor Green
-Write-Host "Launching CloudRedirect STFixer..." -ForegroundColor Cyan
-
-& $out /stfixer
