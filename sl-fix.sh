@@ -3,7 +3,7 @@
 # SteamTools — slsteam-moon auto-installer (Linux)
 #
 # One-liner install:
-#   curl -fsSL https://www.steamtools.app/ost-fix.sh | bash
+#   curl -fsSL https://www.steamtools.app/sl-fix.sh | bash
 #
 # What it does:
 #   1. Downloads the latest slsteam-moon release from GitHub
