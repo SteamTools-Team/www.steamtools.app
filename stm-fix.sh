@@ -66,4 +66,5 @@ fi
 
 chmod +x "$SETUP"
 info "Running steamtools-moon installer..."
+cd "$TMPDIR/root"
 exec bash "$SETUP" install
