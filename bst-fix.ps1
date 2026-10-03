@@ -32,9 +32,9 @@ Write-Host "Steam found at: $SteamPath"
 
 $zipFile = Join-Path $SteamPath "bst.zip"
 try {
-    Write-Host "Downloading BetterSteamTools v1.0.3 (Release)..."
+    Write-Host "Downloading BetterSteamTools v1.0.4 (Release)..."
     Invoke-WebRequest `
-        -Uri "https://github.com/madoiscool/BetterSteamTools/releases/download/v1.0.3/OpenSteamTool-v1.0.3-Release.zip" `
+        -Uri "https://github.com/madoiscool/BetterSteamTools/releases/download/v1.0.4/OpenSteamTool-v1.0.4-Release.zip" `
         -OutFile $zipFile `
         -TimeoutSec 60 `
         -UseBasicParsing
