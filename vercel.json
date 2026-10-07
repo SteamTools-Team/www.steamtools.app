@@ -1,60 +1,16 @@
 {
-  "version": 2,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "astro",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "regions": ["fra1"],
 
   "rewrites": [
-    { "source": "/fr-FR", "destination": "/fr.html" },
-    { "source": "/fr-FR/", "destination": "/fr.html" },
-    { "source": "/en-EN", "destination": "/en.html" },
-    { "source": "/en-EN/", "destination": "/en.html" },
-    { "source": "/zh-CN", "destination": "/zh.html" },
-    { "source": "/zh-CN/", "destination": "/zh.html" },
-    { "source": "/es-ES", "destination": "/es.html" },
-    { "source": "/es-ES/", "destination": "/es.html" },
-    { "source": "/hi-IN", "destination": "/hi.html" },
-    { "source": "/hi-IN/", "destination": "/hi.html" },
-    { "source": "/ar-AR", "destination": "/ar.html" },
-    { "source": "/ar-AR/", "destination": "/ar.html" },
-    { "source": "/pt-BR", "destination": "/pt.html" },
-    { "source": "/pt-BR/", "destination": "/pt.html" },
-    { "source": "/ru-RU", "destination": "/ru.html" },
-    { "source": "/ru-RU/", "destination": "/ru.html" },
-    { "source": "/ja-JP", "destination": "/ja.html" },
-    { "source": "/ja-JP/", "destination": "/ja.html" },
-    { "source": "/de-DE", "destination": "/de.html" },
-    { "source": "/de-DE/", "destination": "/de.html" },
-    { "source": "/ko-KR", "destination": "/ko.html" },
-    { "source": "/ko-KR/", "destination": "/ko.html" },
-    { "source": "/vi-VN", "destination": "/vi.html" },
-    { "source": "/vi-VN/", "destination": "/vi.html" },
-    { "source": "/tr-TR", "destination": "/tr.html" },
-    { "source": "/tr-TR/", "destination": "/tr.html" },
-    { "source": "/it-IT", "destination": "/it.html" },
-    { "source": "/it-IT/", "destination": "/it.html" },
-    { "source": "/pl-PL", "destination": "/pl.html" },
-    { "source": "/pl-PL/", "destination": "/pl.html" },
-    { "source": "/nl-NL", "destination": "/nl.html" },
-    { "source": "/nl-NL/", "destination": "/nl.html" },
-    { "source": "/id-ID", "destination": "/id.html" },
-    { "source": "/id-ID/", "destination": "/id.html" },
-
-    { "source": "/fr-FR/:path*", "destination": "/:path*" },
-    { "source": "/en-EN/:path*", "destination": "/:path*" },
-    { "source": "/zh-CN/:path*", "destination": "/:path*" },
-    { "source": "/es-ES/:path*", "destination": "/:path*" },
-    { "source": "/hi-IN/:path*", "destination": "/:path*" },
-    { "source": "/ar-AR/:path*", "destination": "/:path*" },
-    { "source": "/pt-BR/:path*", "destination": "/:path*" },
-    { "source": "/ru-RU/:path*", "destination": "/:path*" },
-    { "source": "/ja-JP/:path*", "destination": "/:path*" },
-    { "source": "/de-DE/:path*", "destination": "/:path*" },
-    { "source": "/ko-KR/:path*", "destination": "/:path*" },
-    { "source": "/vi-VN/:path*", "destination": "/:path*" },
-    { "source": "/tr-TR/:path*", "destination": "/:path*" },
-    { "source": "/it-IT/:path*", "destination": "/:path*" },
-    { "source": "/pl-PL/:path*", "destination": "/:path*" },
-    { "source": "/nl-NL/:path*", "destination": "/:path*" },
-    { "source": "/id-ID/:path*", "destination": "/:path*" }
+    {
+      "source": "/:locale(fr-FR|en-EN|zh-CN|es-ES|hi-IN|ar-AR|pt-BR|ru-RU|ja-JP|de-DE|ko-KR|vi-VN|tr-TR|it-IT|pl-PL|nl-NL|id-ID)/:path+",
+      "destination": "/:path+"
+    }
   ],
 
   "redirects": [
@@ -76,10 +32,37 @@
     { "source": "/nl", "destination": "/nl-NL/", "permanent": true },
     { "source": "/id", "destination": "/id-ID/", "permanent": true },
 
+    { "source": "/fr.html", "destination": "/fr-FR/", "permanent": true },
+    { "source": "/en.html", "destination": "/en-EN/", "permanent": true },
+    { "source": "/zh.html", "destination": "/zh-CN/", "permanent": true },
+    { "source": "/es.html", "destination": "/es-ES/", "permanent": true },
+    { "source": "/hi.html", "destination": "/hi-IN/", "permanent": true },
+    { "source": "/ar.html", "destination": "/ar-AR/", "permanent": true },
+    { "source": "/pt.html", "destination": "/pt-BR/", "permanent": true },
+    { "source": "/ru.html", "destination": "/ru-RU/", "permanent": true },
+    { "source": "/ja.html", "destination": "/ja-JP/", "permanent": true },
+    { "source": "/de.html", "destination": "/de-DE/", "permanent": true },
+    { "source": "/ko.html", "destination": "/ko-KR/", "permanent": true },
+    { "source": "/vi.html", "destination": "/vi-VN/", "permanent": true },
+    { "source": "/tr.html", "destination": "/tr-TR/", "permanent": true },
+    { "source": "/it.html", "destination": "/it-IT/", "permanent": true },
+    { "source": "/pl.html", "destination": "/pl-PL/", "permanent": true },
+    { "source": "/nl.html", "destination": "/nl-NL/", "permanent": true },
+    { "source": "/id.html", "destination": "/id-ID/", "permanent": true },
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/fixes.html", "destination": "/fixes/", "permanent": true },
+
     { "source": "/discord", "destination": "https://discord.com/invite/steamtoolsapp", "permanent": true },
     { "source": "/discord/", "destination": "https://discord.com/invite/steamtoolsapp", "permanent": true },
 
     { "source": "/shop", "destination": "https://shop.steamtools.app", "permanent": false },
     { "source": "/shop/", "destination": "https://shop.steamtools.app", "permanent": false }
+  ],
+
+  "headers": [
+    {
+      "source": "/_astro/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    }
   ]
 }

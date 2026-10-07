@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import Home from '../components/Home.astro';
+import { defaultLocale, getTranslation, locales } from '../i18n';
+
+const t = getTranslation(defaultLocale.code);
+// Browser language (2 letters) -> page. Unknown languages fall back to English.
+const map: Record<string, string> = Object.fromEntries(locales.map((l) => [l.code, l.path]));
+---
+<Base title={t.title} description={t.description} locale={defaultLocale} path="/" showNav showDiscord>
+  <script is:inline slot="head" define:vars={{ map, fallback: defaultLocale.path }}>
+    (function () {
+      var l;
+      try { l = localStorage.getItem('l'); } catch (e) {}
+      if (!l || !Object.values(map).includes(l)) {
+        var b = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').slice(0, 2).toLowerCase();
+        l = map[b] || fallback;
+        try { localStorage.setItem('l', l); } catch (e) {}
+      }
+      location.replace('/' + l + '/');
+    })();
+  </script>
+  <Home locale={defaultLocale} />
+</Base>

@@ -1,0 +1,41 @@
+{
+  "title": "SteamTools — Unduhan Resmi | Perbaikan, Lua & Manifest",
+  "description": "Unduh SteamTools, toolkit Steam gratis dengan perbaikan game, penyedia Lua/Manifest, pembaruan manifest depot, dan build portabel. Dipercaya oleh 150.000+ gamer.",
+  "tagline": "Toolkit Steam gratis: perbaikan game, penyedia Lua/Manifest, manifest depot, dan build portabel — semua dalam satu.",
+  "download": "Unduh",
+  "installer": "Unduh — Penginstal",
+  "verified": "Terverifikasi",
+  "sizeUnit": "MB",
+  "stats": [
+    {
+      "value": "150.000+",
+      "label": " game didukung"
+    },
+    {
+      "value": "Selalu gratis",
+      "label": " dan terbuka"
+    },
+    {
+      "value": "~14 MB",
+      "label": " ringan"
+    }
+  ],
+  "features": [
+    {
+      "title": "Perbaikan Game",
+      "text": "Perbaikan sekali klik untuk ribuan judul Steam, diperbarui secara rutin."
+    },
+    {
+      "title": "Portabel",
+      "text": "Tanpa instalasi. Di bawah 15 MB, berjalan di mana saja."
+    },
+    {
+      "title": "Aman",
+      "text": "Build yang dihosting GitHub, terverifikasi dan ditandatangani di setiap rilis."
+    }
+  ],
+  "footerSince": "© Sejak 2025 SteamTools",
+  "footerBy": "oleh Ayka",
+  "discordLabel": "Gabung Discord SteamTools",
+  "discordText": "Discord"
+}

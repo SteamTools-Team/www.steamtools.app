@@ -1,0 +1,41 @@
+{
+  "title": "SteamTools — Download ufficiale | Fix, Lua e Manifest",
+  "description": "Scarica SteamTools, il toolkit gratuito per Steam con correzioni di gioco, provider Lua/Manifest, aggiornamenti dei manifest di depot e build portatili. Scelto da oltre 150.000 giocatori.",
+  "tagline": "Il toolkit gratuito per Steam: correzioni di gioco, provider Lua/Manifest, manifest di depot e build portatili — tutto in uno.",
+  "download": "Scarica",
+  "installer": "Scarica — Installer",
+  "verified": "Verificato",
+  "sizeUnit": "MB",
+  "stats": [
+    {
+      "value": "Oltre 150.000",
+      "label": " giochi supportati"
+    },
+    {
+      "value": "Sempre gratuito",
+      "label": " e aperto"
+    },
+    {
+      "value": "~14 MB",
+      "label": " leggero"
+    }
+  ],
+  "features": [
+    {
+      "title": "Correzioni di gioco",
+      "text": "Correzioni in un clic per migliaia di titoli Steam, aggiornate regolarmente."
+    },
+    {
+      "title": "Portatile",
+      "text": "Nessuna installazione necessaria. Sotto gli 15 MB, funziona ovunque."
+    },
+    {
+      "title": "Sicuro",
+      "text": "Build ospitate su GitHub, verificate e firmate a ogni rilascio."
+    }
+  ],
+  "footerSince": "© Dal 2025 SteamTools",
+  "footerBy": "di Ayka",
+  "discordLabel": "Entra nel Discord di SteamTools",
+  "discordText": "Discord"
+}

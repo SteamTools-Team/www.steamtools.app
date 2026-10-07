@@ -1,0 +1,41 @@
+{
+  "title": "SteamTools — Téléchargement officiel | Correctifs, Lua & Manifest",
+  "description": "Téléchargez SteamTools, le kit Steam gratuit pour les correctifs de jeux, le fournisseur Lua/Manifest, les mises à jour de dépôts et les builds portables. Approuvé par plus de 150 000 joueurs.",
+  "tagline": "Le kit Steam gratuit : correctifs de jeux, fournisseur Lua/Manifest, manifests de dépôts et builds portables — le tout en un.",
+  "download": "Télécharger",
+  "installer": "Télécharger — Installable",
+  "verified": "Vérifié",
+  "sizeUnit": "Mo",
+  "stats": [
+    {
+      "value": "150,000+",
+      "label": " jeux supportés"
+    },
+    {
+      "value": "Gratuit",
+      "label": " toujours & ouvert"
+    },
+    {
+      "value": "~14 Mo",
+      "label": " léger"
+    }
+  ],
+  "features": [
+    {
+      "title": "Correctifs",
+      "text": "Correctifs en un clic pour des milliers de titres Steam, mis à jour régulièrement."
+    },
+    {
+      "title": "Portable",
+      "text": "Aucune installation requise. Moins de 15 Mo, fonctionne partout."
+    },
+    {
+      "title": "Sécurisé",
+      "text": "Builds hébergés sur GitHub, vérifiés et signés à chaque version."
+    }
+  ],
+  "footerSince": "© Depuis 2025 SteamTools",
+  "footerBy": "par Ayka",
+  "discordLabel": "Rejoindre le Discord SteamTools",
+  "discordText": "Discord"
+}

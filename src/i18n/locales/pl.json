@@ -1,0 +1,41 @@
+{
+  "title": "SteamTools — Oficjalne pobieranie | Naprawy, Lua i Manifest",
+  "description": "Pobierz SteamTools — darmowy zestaw narzędzi Steam: naprawy gier, dostawca Lua/Manifest, aktualizacje manifestów depot i wersje przenośne. Zaufany przez ponad 150 000 graczy.",
+  "tagline": "Darmowy zestaw narzędzi Steam: naprawy gier, dostawca Lua/Manifest, manifesty depot i wersje przenośne — wszystko w jednym.",
+  "download": "Pobierz",
+  "installer": "Pobierz — Instalator",
+  "verified": "Zweryfikowano",
+  "sizeUnit": "MB",
+  "stats": [
+    {
+      "value": "Ponad 150 000",
+      "label": " obsługiwanych gier"
+    },
+    {
+      "value": "Zawsze darmowy",
+      "label": " i otwarty"
+    },
+    {
+      "value": "~14 MB",
+      "label": " lekki"
+    }
+  ],
+  "features": [
+    {
+      "title": "Naprawy gier",
+      "text": "Naprawy jednym kliknięciem dla tysięcy tytułów Steam, regularnie aktualizowane."
+    },
+    {
+      "title": "Przenośny",
+      "text": "Bez instalacji. Poniżej 15 MB, działa wszędzie."
+    },
+    {
+      "title": "Bezpieczny",
+      "text": "Kompilacje na GitHubie, weryfikowane i podpisywane przy każdej wersji."
+    }
+  ],
+  "footerSince": "© Od 2025 SteamTools",
+  "footerBy": "autorstwa Ayka",
+  "discordLabel": "Dołącz do Discord SteamTools",
+  "discordText": "Discord"
+}

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://steamtools.ayka.dev/sitemap.xml

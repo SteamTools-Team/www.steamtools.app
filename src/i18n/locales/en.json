@@ -1,0 +1,41 @@
+{
+  "title": "SteamTools — Official Download | Game Fixes, Lua & Manifest Provider",
+  "description": "Download SteamTools, the free Steam toolkit for game fixes, Lua/Manifest provider, depot manifest updates and portable builds. Trusted by 150,000+ gamers.",
+  "tagline": "The free Steam toolkit: game fixes, Lua/Manifest provider, depot manifests and portable builds — all in one.",
+  "download": "Download",
+  "installer": "Download — Installer",
+  "verified": "Verified",
+  "sizeUnit": "MB",
+  "stats": [
+    {
+      "value": "150,000+",
+      "label": " games supported"
+    },
+    {
+      "value": "Free",
+      "label": " always & open"
+    },
+    {
+      "value": "~14 MB",
+      "label": " lightweight"
+    }
+  ],
+  "features": [
+    {
+      "title": "Game Fixes",
+      "text": "One-click fixes for thousands of Steam titles, updated regularly."
+    },
+    {
+      "title": "Portable",
+      "text": "No installation needed. Under 15 MB, runs anywhere."
+    },
+    {
+      "title": "Secure",
+      "text": "GitHub-hosted builds, verified and signed on every release."
+    }
+  ],
+  "footerSince": "© Since 2025 SteamTools",
+  "footerBy": "by Ayka",
+  "discordLabel": "Join SteamTools Discord",
+  "discordText": "Discord"
+}

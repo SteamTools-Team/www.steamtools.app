@@ -1,0 +1,41 @@
+{
+  "title": "SteamTools — Resmi İndirme | Düzeltmeler, Lua ve Manifest",
+  "description": "SteamToolsu ücretsiz indirin — oyun düzeltmeleri, Lua/Manifest sağlayıcısı, depot manifest güncellemeleri ve taşınabilir sürümler içeren ücretsiz Steam araç takımı. 150.000den fazla oyuncunun güvenini kazanmıştır.",
+  "tagline": "Ücretsiz Steam araç takımı: oyun düzeltmeleri, Lua/Manifest sağlayıcısı, depot manifestleri ve taşınabilir sürümler — hepsi bir arada.",
+  "download": "İndir",
+  "installer": "İndir — Kurulumcu",
+  "verified": "Doğrulandı",
+  "sizeUnit": "MB",
+  "stats": [
+    {
+      "value": "150.000+",
+      "label": " oyun destekleniyor"
+    },
+    {
+      "value": "Her zaman ücretsiz",
+      "label": " ve açık"
+    },
+    {
+      "value": "~14 MB",
+      "label": " hafif"
+    }
+  ],
+  "features": [
+    {
+      "title": "Oyun Düzeltmeleri",
+      "text": "Binlerce Steam oyunu için tek tıkla düzeltme, düzenli olarak güncellenir."
+    },
+    {
+      "title": "Taşınabilir",
+      "text": "Kurulum gerekmez. 15 MB altında, her yerde çalışır."
+    },
+    {
+      "title": "Güvenli",
+      "text": "GitHub üzerinde barındırılan, her sürümde doğrulanmış ve imzalanmış yapılar."
+    }
+  ],
+  "footerSince": "© 2025ten beri SteamTools",
+  "footerBy": "Ayka tarafından",
+  "discordLabel": "SteamTools Discord katılın",
+  "discordText": "Discord"
+}

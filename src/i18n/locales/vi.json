@@ -1,0 +1,41 @@
+{
+  "title": "SteamTools — Tải xuống chính thức | Sửa lỗi, Lua & Manifest",
+  "description": "Tải SteamTools miễn phí — bộ công cụ Steam với sửa lỗi game, nhà cung cấp Lua/Manifest, cập nhật manifest kho và bản di động. Được hơn 150.000 game thủ tin dùng.",
+  "tagline": "Bộ công cụ Steam miễn phí: sửa lỗi game, nhà cung cấp Lua/Manifest, manifest kho và bản di động — tất cả trong một.",
+  "download": "Tải xuống",
+  "installer": "Tải xuống — Trình cài đặt",
+  "verified": "Đã xác minh",
+  "sizeUnit": "MB",
+  "stats": [
+    {
+      "value": "Hơn 150.000",
+      "label": " trò chơi được hỗ trợ"
+    },
+    {
+      "value": "Luôn miễn phí",
+      "label": " và mở"
+    },
+    {
+      "value": "~14 MB",
+      "label": " nhẹ"
+    }
+  ],
+  "features": [
+    {
+      "title": "Sửa lỗi trò chơi",
+      "text": "Sửa lỗi một chạm cho hàng nghìn tựa game Steam, cập nhật thường xuyên."
+    },
+    {
+      "title": "Di động",
+      "text": "Không cần cài đặt. Dưới 15 MB, chạy ở mọi nơi."
+    },
+    {
+      "title": "An toàn",
+      "text": "Bản dựng lưu trên GitHub, được xác minh và ký ở mỗi bản phát hành."
+    }
+  ],
+  "footerSince": "© Từ 2025 SteamTools",
+  "footerBy": "bởi Ayka",
+  "discordLabel": "Tham gia Discord SteamTools",
+  "discordText": "Discord"
+}

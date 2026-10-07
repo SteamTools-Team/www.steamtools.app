@@ -1,0 +1,114 @@
+---
+import Icon from './Icon.astro';
+import { getTranslation, type Locale } from '../i18n';
+import { downloads, getReleaseDate, releaseDateApi } from '../site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslation(locale.code);
+const releaseIso = await getReleaseDate();
+const formatDate = (iso: string) =>
+  new Intl.DateTimeFormat(locale.intl, { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(iso));
+const featureIcons = ['gamepad', 'box', 'shield'] as const;
+const win = downloads.windows;
+---
+<div class="container">
+  <section class="hero">
+    <div class="hero-icon">
+      <img src="/assets/fav.ico" alt="SteamTools" width="64" height="64" fetchpriority="high" />
+    </div>
+    <h1>SteamTools</h1>
+    <p>{t.tagline}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" id="btn-download" href={win.url} download={win.file}>
+        <Icon name="download" />
+        {t.download}
+      </a>
+      <button class="btn btn-secondary" id="btn-installer" type="button" hidden>
+        <Icon name="box" />
+        {t.installer}
+      </button>
+    </div>
+    <div class="hero-meta">
+      <span id="meta-file">{win.file}</span>
+      <span class="sep"></span>
+      <span id="meta-size">{win.size} {t.sizeUnit}</span>
+      {releaseIso && (
+        <>
+          <span class="sep"></span>
+          <time id="meta-date" datetime={releaseIso} data-intl={locale.intl}>{formatDate(releaseIso)}</time>
+        </>
+      )}
+      <span class="sep"></span>
+      <span class="verified">
+        <Icon name="verified" />
+        {t.verified}
+      </span>
+      <span class="sep"></span>
+      <span id="meta-os">{win.os}</span>
+    </div>
+  </section>
+
+  <div class="stats-wrap">
+    <div class="stats">
+      {t.stats.map((s, i) => (
+        <>
+          {i > 0 && <div class="stat-sep"></div>}
+          <div class="stat-item"><strong>{s.value}</strong>{s.label}</div>
+        </>
+      ))}
+    </div>
+  </div>
+
+  <div class="features">
+    {t.features.map((f, i) => (
+      <div class="feature">
+        <div class="feature-icon"><Icon name={featureIcons[i]} /></div>
+        <h3>{f.title}</h3>
+        <p>{f.text}</p>
+      </div>
+    ))}
+  </div>
+</div>
+
+<script
+  is:inline
+  define:vars={{ linux: downloads.linux, unit: t.sizeUnit, api: releaseDateApi }}
+>
+  (function () {
+    var p = ((navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '').toLowerCase();
+    if (p.indexOf('linux') > -1 || p.indexOf('mac') > -1) {
+      var btn = document.getElementById('btn-download');
+      btn.href = linux.url;
+      btn.download = linux.file;
+      document.getElementById('meta-file').textContent = linux.file;
+      document.getElementById('meta-size').textContent = linux.size + ' ' + unit;
+      document.getElementById('meta-os').textContent = linux.os;
+    }
+
+    // Refresh the release date (cached 1h to stay under GitHub's rate limit).
+    var el = document.getElementById('meta-date');
+    if (!el) return;
+    var KEY = 'st_release_date';
+    var show = function (iso) {
+      el.dateTime = iso;
+      el.textContent = new Intl.DateTimeFormat(el.dataset.intl, { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(iso));
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem(KEY));
+      if (c && c.iso && Date.now() - c.ts < 3600000) return show(c.iso);
+    } catch (e) {}
+    fetch(api)
+      .then(function (r) { return r.json(); })
+      .then(function (commits) {
+        var iso = commits && commits[0] && commits[0].commit.committer.date;
+        if (!iso) return;
+        show(iso);
+        try { localStorage.setItem(KEY, JSON.stringify({ iso: iso, ts: Date.now() })); } catch (e) {}
+      })
+      .catch(function () {});
+  })();
+</script>

@@ -1,0 +1,141 @@
+---
+import '@fontsource-variable/dm-sans';
+import '@fontsource/comfortaa/700.css';
+import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+import { defaultLocale, getTranslation, locales, type Locale } from '../i18n';
+import { links, version } from '../site';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Current locale: enables the language menu and hreflang alternates */
+  locale?: Locale;
+  /** Canonical path, e.g. "/fr-FR/" */
+  path?: string;
+  showNav?: boolean;
+  showDiscord?: boolean;
+  noindex?: boolean;
+}
+
+const { title, description, locale, path, showNav = false, showDiscord = false, noindex = false } = Astro.props;
+const lang = locale ?? defaultLocale;
+const t = getTranslation(lang.code);
+const site = Astro.site!;
+const canonical = path ? new URL(path, site).href : undefined;
+const ogImage = new URL('/assets/fav.ico', site).href;
+---
+<!doctype html>
+<html lang={lang.hreflang} dir={lang.dir}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" href="/assets/fav.ico" type="image/x-icon" />
+    <meta name="theme-color" content="#080808" />
+    {canonical && <link rel="canonical" href={canonical} />}
+    {locale && locales.map((l) => (
+      <link rel="alternate" hreflang={l.hreflang} href={new URL(`/${l.path}/`, site).href} />
+    ))}
+    {locale && <link rel="alternate" hreflang="x-default" href={site.href} />}
+    {canonical && (
+      <>
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="SteamTools" />
+        <meta property="og:title" content={title} />
+        {description && <meta property="og:description" content={description} />}
+        <meta property="og:url" content={canonical} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:locale" content={lang.intl.split('-u-')[0].replace('-', '_')} />
+        <meta name="twitter:card" content="summary" />
+      </>
+    )}
+    <slot name="head" />
+  </head>
+  <body>
+    <div class="bg-layer bg-orbs"><div class="o3"></div></div>
+    <div class="bg-layer bg-grid"></div>
+    <div class="bg-layer bg-pattern"></div>
+
+    <header>
+      <div class="header-inner">
+        <div class="header-left">
+          <a href={locale ? `/${locale.path}/` : '/'}>
+            <img src="/assets/fav.ico" alt="" width="28" height="28" />
+            <span>SteamTools</span>
+          </a>
+        </div>
+        {showNav && (
+          <nav class="header-nav">
+            <a href={links.manifest} target="_blank" rel="noopener">Manifest</a>
+            <a href={links.shop} target="_blank" rel="noopener">Premium</a>
+          </nav>
+        )}
+        <div class="header-right">
+          {locale && (
+            <details class="lang-menu">
+              <summary aria-label="Language">
+                <Icon name="globe" />
+                <span>{locale.code.toUpperCase()}</span>
+              </summary>
+              <ul>
+                {locales.map((l) => (
+                  <li>
+                    <a
+                      href={`/${l.path}/`}
+                      hreflang={l.hreflang}
+                      lang={l.hreflang}
+                      data-locale={l.path}
+                      aria-current={l.path === locale.path ? 'page' : undefined}
+                    >
+                      {l.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )}
+          <a href={links.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <Icon name="github" />
+          </a>
+          <a href={links.discord} target="_blank" rel="noopener noreferrer" aria-label="Discord">
+            <Icon name="discord" />
+          </a>
+          <span class="version-badge">v{version}</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <span>{t.footerSince}</span>
+      <span class="sep">&middot;</span>
+      <span>{t.footerBy}</span>
+    </footer>
+
+    {showDiscord && (
+      <a href={links.discord} class="discord-btn" target="_blank" rel="noopener noreferrer" aria-label={t.discordLabel}>
+        <Icon name="discord" />
+        {t.discordText}
+      </a>
+    )}
+
+    <script>
+      // Remember the chosen language for the "/" redirect, and close the menu on outside click.
+      document.querySelectorAll<HTMLAnchorElement>('.lang-menu a[data-locale]').forEach((a) => {
+        a.addEventListener('click', () => {
+          try { localStorage.setItem('l', a.dataset.locale!); } catch {}
+        });
+      });
+      document.addEventListener('click', (e) => {
+        const menu = document.querySelector<HTMLDetailsElement>('.lang-menu[open]');
+        if (menu && !menu.contains(e.target as Node)) menu.open = false;
+      });
+    </script>
+  </body>
+</html>

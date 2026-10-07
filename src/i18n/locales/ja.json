@@ -1,0 +1,41 @@
+{
+  "title": "SteamTools — 公式ダウンロード | ゲーム修正、Lua & Manifest",
+  "description": "SteamTools を無料ダウンロード。ゲーム修正、Lua/Manifest プロバイダー、デポマニフェスト更新、ポータブル版を備えた無料の Steam ツールキット。150,000人以上のゲーマーが信頼。",
+  "tagline": "無料の Steam ツールキット: ゲーム修正、Lua/Manifest プロバイダー、デポマニフェスト、ポータブル版 — オールインワン。",
+  "download": "ダウンロード",
+  "installer": "ダウンロード — インストーラー",
+  "verified": "検証済み",
+  "sizeUnit": "MB",
+  "stats": [
+    {
+      "value": "150,000以上",
+      "label": "のゲームに対応"
+    },
+    {
+      "value": "常に無料",
+      "label": "・オープン"
+    },
+    {
+      "value": "~14 MB",
+      "label": "の軽量設計"
+    }
+  ],
+  "features": [
+    {
+      "title": "ゲーム修正",
+      "text": "数千のSteamタイトルに対応するワンクリック修正、定期的に更新。"
+    },
+    {
+      "title": "ポータブル",
+      "text": "インストール不要。15MB未満でどこでも動作。"
+    },
+    {
+      "title": "安全",
+      "text": "GitHubでホストされ、毎リリース検証・署名済み。"
+    }
+  ],
+  "footerSince": "© 2025年から SteamTools",
+  "footerBy": "Ayka 制作",
+  "discordLabel": "SteamTools Discordに参加",
+  "discordText": "Discord"
+}

@@ -1,0 +1,41 @@
+{
+  "title": "SteamTools — 공식 다운로드 | 게임 수정, Lua & Manifest",
+  "description": "SteamTools 무료 다운로드: 게임 수정, Lua/Manifest 프로바이더, 디포 매니페스트 업데이트, 휴대용 빌드가 포함된 무료 Steam 툴킷. 150,000명 이상의 게이머가 신뢰.",
+  "tagline": "무료 Steam 툴킷: 게임 수정, Lua/Manifest 프로바이더, 디포 매니페스트, 휴대용 빌드 — 올인원.",
+  "download": "다운로드",
+  "installer": "다운로드 — 설치 프로그램",
+  "verified": "확인됨",
+  "sizeUnit": "MB",
+  "stats": [
+    {
+      "value": "150,000개 이상",
+      "label": "의 게임 지원"
+    },
+    {
+      "value": "항상 무료",
+      "label": " 및 오픈"
+    },
+    {
+      "value": "~14 MB",
+      "label": " 가벼움"
+    }
+  ],
+  "features": [
+    {
+      "title": "게임 수정",
+      "text": "수천 개의 Steam 타이틀을 위한 원클릭 수정, 정기 업데이트."
+    },
+    {
+      "title": "휴대용",
+      "text": "설치 불필요. 15MB 미만, 어디서나 실행."
+    },
+    {
+      "title": "안전",
+      "text": "GitHub 호스팅 빌드, 모든 릴리스에서 검증 및 서명."
+    }
+  ],
+  "footerSince": "© 2025년부터 SteamTools",
+  "footerBy": "Ayka 제작",
+  "discordLabel": "SteamTools Discord 가입",
+  "discordText": "Discord"
+}

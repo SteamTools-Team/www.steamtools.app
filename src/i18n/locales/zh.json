@@ -1,0 +1,41 @@
+{
+  "title": "SteamTools — 官方下载 | 游戏修复、Lua 与 Manifest",
+  "description": "下载 SteamTools，免费 Steam 工具包，提供游戏修复、Lua/Manifest 提供器、存储库清单更新和便携版。深受 150,000+ 玩家信赖。",
+  "tagline": "免费 Steam 工具包：游戏修复、Lua/Manifest 提供器、存储库清单和便携版 —— 集于一体。",
+  "download": "下载",
+  "installer": "下载 — 安装程序",
+  "verified": "已验证",
+  "sizeUnit": "MB",
+  "stats": [
+    {
+      "value": "150,000+",
+      "label": " 支持的游戏"
+    },
+    {
+      "value": "始终免费",
+      "label": " 且开源"
+    },
+    {
+      "value": "~14 MB",
+      "label": " 轻量"
+    }
+  ],
+  "features": [
+    {
+      "title": "游戏修复",
+      "text": "一键修复数千款 Steam 游戏，定期更新。"
+    },
+    {
+      "title": "便携",
+      "text": "无需安装。低于 15 MB，随处运行。"
+    },
+    {
+      "title": "安全",
+      "text": "由 GitHub 托管，每个版本均经过验证和签名。"
+    }
+  ],
+  "footerSince": "© 自 2025 年 SteamTools",
+  "footerBy": "由 Ayka 制作",
+  "discordLabel": "加入 SteamTools Discord",
+  "discordText": "Discord"
+}

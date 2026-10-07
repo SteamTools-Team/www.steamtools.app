@@ -1,0 +1,41 @@
+{
+  "title": "SteamTools — Officiële download | Fixes, Lua & Manifest",
+  "description": "Download SteamTools, de gratis Steam-toolkit met game-fixes, Lua/Manifest-provider, depot-manifestupdates en draagbare builds. Vertrouwd door meer dan 150.000 gamers.",
+  "tagline": "De gratis Steam-toolkit: game-fixes, Lua/Manifest-provider, depot-manifesten en draagbare builds — alles in één.",
+  "download": "Downloaden",
+  "installer": "Downloaden — Installer",
+  "verified": "Geverifieerd",
+  "sizeUnit": "MB",
+  "stats": [
+    {
+      "value": "150.000+",
+      "label": " ondersteunde games"
+    },
+    {
+      "value": "Altijd gratis",
+      "label": " en open"
+    },
+    {
+      "value": "~14 MB",
+      "label": " lichtgewicht"
+    }
+  ],
+  "features": [
+    {
+      "title": "Game-fixes",
+      "text": "Fixes met één klik voor duizenden Steam-titels, regelmatig bijgewerkt."
+    },
+    {
+      "title": "Draagbaar",
+      "text": "Geen installatie nodig. Onder 15 MB, werkt overal."
+    },
+    {
+      "title": "Veilig",
+      "text": "Op GitHub gehoste builds, geverifieerd en ondertekend bij elke release."
+    }
+  ],
+  "footerSince": "© Sinds 2025 SteamTools",
+  "footerBy": "door Ayka",
+  "discordLabel": "Word lid van de SteamTools Discord",
+  "discordText": "Discord"
+}
