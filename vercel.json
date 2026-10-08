@@ -50,7 +50,9 @@
     { "source": "/nl.html", "destination": "/nl-NL/", "permanent": true },
     { "source": "/id.html", "destination": "/id-ID/", "permanent": true },
     { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/fixes.html", "destination": "/fixes/", "permanent": true },
+    { "source": "/fixes.html", "destination": "/", "permanent": true },
+    { "source": "/fixes", "destination": "/", "permanent": true },
+    { "source": "/fixes/", "destination": "/", "permanent": true },
 
     { "source": "/discord", "destination": "https://discord.com/invite/steamtoolsapp", "permanent": true },
     { "source": "/discord/", "destination": "https://discord.com/invite/steamtoolsapp", "permanent": true },

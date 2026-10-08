@@ -16,7 +16,7 @@
       "label": " हमेशा और खुला"
     },
     {
-      "value": "~14 MB",
+      "value": "~{size} MB",
       "label": " हल्का"
     }
   ],
@@ -27,7 +27,7 @@
     },
     {
       "title": "पोर्टेबल",
-      "text": "इंस्टॉलेशन की आवश्यकता नहीं। 15 MB से कम, कहीं भी चलता है।"
+      "text": "इंस्टॉलेशन की आवश्यकता नहीं। {limit} MB से कम, कहीं भी चलता है।"
     },
     {
       "title": "सुरक्षित",
@@ -37,5 +37,10 @@
   "footerSince": "© 2025 से SteamTools",
   "footerBy": "Ayka द्वारा",
   "discordLabel": "SteamTools Discord से जुड़ें",
-  "discordText": "Discord"
+  "discordText": "Discord",
+  "navFeatures": "विशेषताएँ",
+  "featuresTitle": "वह सब जो आपको चाहिए। उससे ज़्यादा कुछ नहीं।",
+  "platformsTitle": "अपने सिस्टम के लिए डाउनलोड करें।",
+  "recommended": "आपके लिए अनुशंसित",
+  "versionLabel": "संस्करण"
 }

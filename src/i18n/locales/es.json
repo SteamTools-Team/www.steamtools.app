@@ -16,7 +16,7 @@
       "label": " siempre y abierto"
     },
     {
-      "value": "~14 MB",
+      "value": "~{size} MB",
       "label": " ligero"
     }
   ],
@@ -27,7 +27,7 @@
     },
     {
       "title": "Portátil",
-      "text": "Sin instalación necesaria. Menos de 15 MB, funciona en cualquier lugar."
+      "text": "Sin instalación necesaria. Menos de {limit} MB, funciona en cualquier lugar."
     },
     {
       "title": "Seguro",
@@ -37,5 +37,10 @@
   "footerSince": "© Desde 2025 SteamTools",
   "footerBy": "por Ayka",
   "discordLabel": "Únete al Discord de SteamTools",
-  "discordText": "Discord"
+  "discordText": "Discord",
+  "navFeatures": "Funciones",
+  "featuresTitle": "Todo lo que necesitas. Nada que sobre.",
+  "platformsTitle": "Descarga para tu sistema.",
+  "recommended": "Recomendado para ti",
+  "versionLabel": "Versión"
 }

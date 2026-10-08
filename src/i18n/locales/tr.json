@@ -16,7 +16,7 @@
       "label": " ve açık"
     },
     {
-      "value": "~14 MB",
+      "value": "~{size} MB",
       "label": " hafif"
     }
   ],
@@ -27,7 +27,7 @@
     },
     {
       "title": "Taşınabilir",
-      "text": "Kurulum gerekmez. 15 MB altında, her yerde çalışır."
+      "text": "Kurulum gerekmez. {limit} MB altında, her yerde çalışır."
     },
     {
       "title": "Güvenli",
@@ -37,5 +37,10 @@
   "footerSince": "© 2025ten beri SteamTools",
   "footerBy": "Ayka tarafından",
   "discordLabel": "SteamTools Discord katılın",
-  "discordText": "Discord"
+  "discordText": "Discord",
+  "navFeatures": "Özellikler",
+  "featuresTitle": "İhtiyacınız olan her şey. Fazlası değil.",
+  "platformsTitle": "Sisteminiz için indirin.",
+  "recommended": "Sizin için önerilen",
+  "versionLabel": "Sürüm"
 }

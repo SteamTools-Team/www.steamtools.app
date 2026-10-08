@@ -10,6 +10,6 @@ export function getStaticPaths() {
 const { locale } = Astro.props as { locale: Locale };
 const t = getTranslation(locale.code);
 ---
-<Base title={t.title} description={t.description} locale={locale} path={`/${locale.path}/`} showNav showDiscord>
+<Base title={t.title} description={t.description} locale={locale} path={`/${locale.path}/`} home>
   <Home locale={locale} />
 </Base>

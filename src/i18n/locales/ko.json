@@ -16,7 +16,7 @@
       "label": " 및 오픈"
     },
     {
-      "value": "~14 MB",
+      "value": "~{size} MB",
       "label": " 가벼움"
     }
   ],
@@ -27,7 +27,7 @@
     },
     {
       "title": "휴대용",
-      "text": "설치 불필요. 15MB 미만, 어디서나 실행."
+      "text": "설치 불필요. {limit}MB 미만, 어디서나 실행."
     },
     {
       "title": "안전",
@@ -37,5 +37,10 @@
   "footerSince": "© 2025년부터 SteamTools",
   "footerBy": "Ayka 제작",
   "discordLabel": "SteamTools Discord 가입",
-  "discordText": "Discord"
+  "discordText": "Discord",
+  "navFeatures": "기능",
+  "featuresTitle": "필요한 모든 것. 불필요한 것은 없이.",
+  "platformsTitle": "사용 중인 시스템에 맞게 다운로드하세요.",
+  "recommended": "추천",
+  "versionLabel": "버전"
 }

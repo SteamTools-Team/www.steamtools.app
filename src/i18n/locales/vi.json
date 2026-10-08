@@ -16,7 +16,7 @@
       "label": " và mở"
     },
     {
-      "value": "~14 MB",
+      "value": "~{size} MB",
       "label": " nhẹ"
     }
   ],
@@ -27,7 +27,7 @@
     },
     {
       "title": "Di động",
-      "text": "Không cần cài đặt. Dưới 15 MB, chạy ở mọi nơi."
+      "text": "Không cần cài đặt. Dưới {limit} MB, chạy ở mọi nơi."
     },
     {
       "title": "An toàn",
@@ -37,5 +37,10 @@
   "footerSince": "© Từ 2025 SteamTools",
   "footerBy": "bởi Ayka",
   "discordLabel": "Tham gia Discord SteamTools",
-  "discordText": "Discord"
+  "discordText": "Discord",
+  "navFeatures": "Tính năng",
+  "featuresTitle": "Mọi thứ bạn cần. Không gì thừa.",
+  "platformsTitle": "Tải xuống cho hệ thống của bạn.",
+  "recommended": "Đề xuất cho bạn",
+  "versionLabel": "Phiên bản"
 }

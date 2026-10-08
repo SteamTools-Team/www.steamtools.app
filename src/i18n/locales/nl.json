@@ -16,7 +16,7 @@
       "label": " en open"
     },
     {
-      "value": "~14 MB",
+      "value": "~{size} MB",
       "label": " lichtgewicht"
     }
   ],
@@ -27,7 +27,7 @@
     },
     {
       "title": "Draagbaar",
-      "text": "Geen installatie nodig. Onder 15 MB, werkt overal."
+      "text": "Geen installatie nodig. Onder {limit} MB, werkt overal."
     },
     {
       "title": "Veilig",
@@ -37,5 +37,10 @@
   "footerSince": "© Sinds 2025 SteamTools",
   "footerBy": "door Ayka",
   "discordLabel": "Word lid van de SteamTools Discord",
-  "discordText": "Discord"
+  "discordText": "Discord",
+  "navFeatures": "Functies",
+  "featuresTitle": "Alles wat je nodig hebt. Niets meer.",
+  "platformsTitle": "Download voor jouw systeem.",
+  "recommended": "Aanbevolen voor jou",
+  "versionLabel": "Versie"
 }

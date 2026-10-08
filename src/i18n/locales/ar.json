@@ -16,7 +16,7 @@
       "label": " دائمًا ومفتوح المصدر"
     },
     {
-      "value": "~14 ميجابايت",
+      "value": "~{size} ميجابايت",
       "label": " خفيف"
     }
   ],
@@ -27,7 +27,7 @@
     },
     {
       "title": "محمول",
-      "text": "لا حاجة للتثبيت. أقل من 15 ميجابايت، يعمل في أي مكان."
+      "text": "لا حاجة للتثبيت. أقل من {limit} ميجابايت، يعمل في أي مكان."
     },
     {
       "title": "آمن",
@@ -37,5 +37,10 @@
   "footerSince": "© منذ 2025 SteamTools",
   "footerBy": "بواسطة Ayka",
   "discordLabel": "انضم إلى Discord الخاص بـ SteamTools",
-  "discordText": "ديسكورد"
+  "discordText": "ديسكورد",
+  "navFeatures": "الميزات",
+  "featuresTitle": "كل ما تحتاجه، لا أكثر.",
+  "platformsTitle": "حمّل الإصدار المناسب لنظامك.",
+  "recommended": "موصى به لك",
+  "versionLabel": "الإصدار"
 }

@@ -1,7 +1,9 @@
 ---
+import { Image } from 'astro:assets';
+import appIcon from '../assets/app-icon.png';
 import Icon from './Icon.astro';
 import { getTranslation, type Locale } from '../i18n';
-import { downloads, getReleaseDate, releaseDateApi } from '../site';
+import { getRelease, platforms, releaseDateApi, type Os } from '../site';
 
 interface Props {
   locale: Locale;
@@ -9,88 +11,122 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = getTranslation(locale.code);
-const releaseIso = await getReleaseDate();
+const { versions, sizesMb, date } = await getRelease();
+
+const num = new Intl.NumberFormat(locale.intl, { maximumFractionDigits: 1 });
+const size = (os: Os) => `${num.format(sizesMb[os])} ${t.sizeUnit}`;
 const formatDate = (iso: string) =>
   new Intl.DateTimeFormat(locale.intl, { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(iso));
-const featureIcons = ['gamepad', 'box', 'shield'] as const;
-const win = downloads.windows;
----
-<div class="container">
-  <section class="hero">
-    <div class="hero-icon">
-      <img src="/assets/fav.ico" alt="SteamTools" width="64" height="64" fetchpriority="high" />
-    </div>
-    <h1>SteamTools</h1>
-    <p>{t.tagline}</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" id="btn-download" href={win.url} download={win.file}>
-        <Icon name="download" />
-        {t.download}
-      </a>
-      <button class="btn btn-secondary" id="btn-installer" type="button" hidden>
-        <Icon name="box" />
-        {t.installer}
-      </button>
-    </div>
-    <div class="hero-meta">
-      <span id="meta-file">{win.file}</span>
-      <span class="sep"></span>
-      <span id="meta-size">{win.size} {t.sizeUnit}</span>
-      {releaseIso && (
-        <>
-          <span class="sep"></span>
-          <time id="meta-date" datetime={releaseIso} data-intl={locale.intl}>{formatDate(releaseIso)}</time>
-        </>
-      )}
-      <span class="sep"></span>
-      <span class="verified">
-        <Icon name="verified" />
-        {t.verified}
-      </span>
-      <span class="sep"></span>
-      <span id="meta-os">{win.os}</span>
-    </div>
-  </section>
+const fill = (s: string) =>
+  s.replace('{size}', String(Math.round(sizesMb.windows))).replace('{limit}', String(Math.ceil(sizesMb.windows / 5) * 5));
+/** Split a heading into words for the word-by-word reveal (CJK headings stay one block). */
+const words = (s: string) => s.split(/\s+/);
 
-  <div class="stats-wrap">
-    <div class="stats">
-      {t.stats.map((s, i) => (
-        <>
-          {i > 0 && <div class="stat-sep"></div>}
-          <div class="stat-item"><strong>{s.value}</strong>{s.label}</div>
-        </>
-      ))}
+const featureIcons = ['gamepad', 'box', 'shield'] as const;
+const osList: Os[] = ['windows', 'linux'];
+const osIcon = { windows: 'windows', linux: 'terminal' } as const;
+const brand = [...'SteamTools'];
+---
+<section class="wrap hero">
+  <div class="app-icon" data-tilt>
+    <div class="app-icon-inner">
+      <Image src={appIcon} alt="SteamTools" width={144} height={144} densities={[1, 2]} loading="eager" fetchpriority="high" />
     </div>
   </div>
 
-  <div class="features">
-    {t.features.map((f, i) => (
-      <div class="feature">
-        <div class="feature-icon"><Icon name={featureIcons[i]} /></div>
-        <h3>{f.title}</h3>
-        <p>{f.text}</p>
+  <a class="eyebrow" href="#download">
+    <span class="dot" aria-hidden="true"></span>
+    {osList.map((os) => (
+      <span data-os-only={os}>
+        <strong data-version={os}>v{versions[os]}</strong> · {platforms[os].name}
+      </span>
+    ))}
+  </a>
+
+  <h1 aria-label="SteamTools">
+    {brand.map((c, i) => <span class="char" style={`--i:${i}`} aria-hidden="true">{c}</span>)}
+  </h1>
+  <p class="lead">{t.tagline}</p>
+
+  <div class="hero-actions">
+    {osList.map((os) => (
+      <a class="btn btn-primary" href={platforms[os].url} download={platforms[os].file} data-os-only={os}>
+        <Icon name="download" />
+        {t.download}
+      </a>
+    ))}
+    <a class="link-arrow" href="#download">
+      {t.platformsTitle.replace(/[.。]$/, '')}
+      <Icon name="arrow" />
+    </a>
+  </div>
+
+  <div class="hero-meta">
+    <span class="verified"><Icon name="verified" />{t.verified}</span>
+    {osList.map((os) => <span data-os-only={os}>{platforms[os].file}</span>)}
+    {osList.map((os) => <span data-os-only={os}>{size(os)}</span>)}
+    {date && <time class="release-date" datetime={date} data-intl={locale.intl}>{formatDate(date)}</time>}
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="stats" data-reveal>
+    {t.stats.map((s, i) => (
+      <div class="stat" style={`--d:${i}`}>
+        <strong data-count>{fill(s.value)}</strong>
+        <span>{s.label.trim()}</span>
       </div>
     ))}
   </div>
 </div>
 
-<script
-  is:inline
-  define:vars={{ linux: downloads.linux, unit: t.sizeUnit, api: releaseDateApi }}
->
-  (function () {
-    var p = ((navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '').toLowerCase();
-    if (p.indexOf('linux') > -1 || p.indexOf('mac') > -1) {
-      var btn = document.getElementById('btn-download');
-      btn.href = linux.url;
-      btn.download = linux.file;
-      document.getElementById('meta-file').textContent = linux.file;
-      document.getElementById('meta-size').textContent = linux.size + ' ' + unit;
-      document.getElementById('meta-os').textContent = linux.os;
-    }
+<section class="wrap section" id="features">
+  <header class="section-head" data-reveal>
+    <span class="kicker">{t.navFeatures}</span>
+    <h2>{words(t.featuresTitle).map((w, i, all) => <><span class="word" style={`--w:${i}`}>{w}</span>{i < all.length - 1 && ' '}</>)}</h2>
+  </header>
+  <div class="bento">
+    {t.features.map((f, i) => (
+      <article class:list={['tile', 'spot', { 'tile-wide': i === 0 }]} data-reveal style={`--d:${i}`}>
+        <span class="spot-glow" aria-hidden="true"></span>
+        <div class="tile-icon"><Icon name={featureIcons[i]} /></div>
+        <h3>{f.title}</h3>
+        <p>{fill(f.text)}</p>
+      </article>
+    ))}
+  </div>
+</section>
 
-    // Refresh the release date (cached 1h to stay under GitHub's rate limit).
-    var el = document.getElementById('meta-date');
+<section class="wrap section section-last" id="download">
+  <header class="section-head" data-reveal>
+    <span class="kicker">{t.download}</span>
+    <h2>{words(t.platformsTitle).map((w, i, all) => <><span class="word" style={`--w:${i}`}>{w}</span>{i < all.length - 1 && ' '}</>)}</h2>
+  </header>
+  <div class="platforms">
+    {osList.map((os, i) => (
+      <article class="platform spot" data-platform={os} data-reveal style={`--d:${i}`}>
+        <span class="spot-glow" aria-hidden="true"></span>
+        <span class="badge">{t.recommended}</span>
+        <div class="platform-logo"><Icon name={osIcon[os]} /></div>
+        <h3>{platforms[os].name}</h3>
+        <p class="platform-meta">
+          <span data-version={os}>v{versions[os]}</span>
+          <span>{platforms[os].file}</span>
+          <span>{size(os)}</span>
+        </p>
+        <a class="btn btn-primary" href={platforms[os].url} download={platforms[os].file}>
+          <Icon name="download" />
+          {t.download}
+        </a>
+      </article>
+    ))}
+  </div>
+</section>
+
+<script is:inline define:vars={{ api: releaseDateApi }}>
+  // Refresh the release date (cached 1h to stay under GitHub's rate limit).
+  (function () {
+    var el = document.querySelector('.release-date');
     if (!el) return;
     var KEY = 'st_release_date';
     var show = function (iso) {

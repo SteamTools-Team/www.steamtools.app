@@ -16,7 +16,7 @@
       "label": " dan terbuka"
     },
     {
-      "value": "~14 MB",
+      "value": "~{size} MB",
       "label": " ringan"
     }
   ],
@@ -27,7 +27,7 @@
     },
     {
       "title": "Portabel",
-      "text": "Tanpa instalasi. Di bawah 15 MB, berjalan di mana saja."
+      "text": "Tanpa instalasi. Di bawah {limit} MB, berjalan di mana saja."
     },
     {
       "title": "Aman",
@@ -37,5 +37,10 @@
   "footerSince": "© Sejak 2025 SteamTools",
   "footerBy": "oleh Ayka",
   "discordLabel": "Gabung Discord SteamTools",
-  "discordText": "Discord"
+  "discordText": "Discord",
+  "navFeatures": "Fitur",
+  "featuresTitle": "Semua yang Anda butuhkan. Tanpa yang tidak perlu.",
+  "platformsTitle": "Unduh untuk sistem Anda.",
+  "recommended": "Direkomendasikan untuk Anda",
+  "versionLabel": "Versi"
 }

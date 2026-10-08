@@ -16,7 +16,7 @@
       "label": "・オープン"
     },
     {
-      "value": "~14 MB",
+      "value": "~{size} MB",
       "label": "の軽量設計"
     }
   ],
@@ -27,7 +27,7 @@
     },
     {
       "title": "ポータブル",
-      "text": "インストール不要。15MB未満でどこでも動作。"
+      "text": "インストール不要。{limit}MB未満でどこでも動作。"
     },
     {
       "title": "安全",
@@ -37,5 +37,10 @@
   "footerSince": "© 2025年から SteamTools",
   "footerBy": "Ayka 制作",
   "discordLabel": "SteamTools Discordに参加",
-  "discordText": "Discord"
+  "discordText": "Discord",
+  "navFeatures": "機能",
+  "featuresTitle": "必要なものすべて。余計なものはなし。",
+  "platformsTitle": "お使いのシステム用にダウンロード。",
+  "recommended": "おすすめ",
+  "versionLabel": "バージョン"
 }

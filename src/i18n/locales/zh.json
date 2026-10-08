@@ -16,7 +16,7 @@
       "label": " 且开源"
     },
     {
-      "value": "~14 MB",
+      "value": "~{size} MB",
       "label": " 轻量"
     }
   ],
@@ -27,7 +27,7 @@
     },
     {
       "title": "便携",
-      "text": "无需安装。低于 15 MB，随处运行。"
+      "text": "无需安装。低于 {limit} MB，随处运行。"
     },
     {
       "title": "安全",
@@ -37,5 +37,10 @@
   "footerSince": "© 自 2025 年 SteamTools",
   "footerBy": "由 Ayka 制作",
   "discordLabel": "加入 SteamTools Discord",
-  "discordText": "Discord"
+  "discordText": "Discord",
+  "navFeatures": "功能",
+  "featuresTitle": "你需要的一切，仅此而已。",
+  "platformsTitle": "下载适合你系统的版本。",
+  "recommended": "为你推荐",
+  "versionLabel": "版本"
 }

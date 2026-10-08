@@ -16,7 +16,7 @@
       "label": " и открыто"
     },
     {
-      "value": "~14 МБ",
+      "value": "~{size} МБ",
       "label": " легко"
     }
   ],
@@ -27,7 +27,7 @@
     },
     {
       "title": "Портативный",
-      "text": "Установка не требуется. Менее 15 МБ, работает где угодно."
+      "text": "Установка не требуется. Менее {limit} МБ, работает где угодно."
     },
     {
       "title": "Безопасно",
@@ -37,5 +37,10 @@
   "footerSince": "© С 2025 года SteamTools",
   "footerBy": "от Ayka",
   "discordLabel": "Присоединиться к Discord SteamTools",
-  "discordText": "Discord"
+  "discordText": "Discord",
+  "navFeatures": "Возможности",
+  "featuresTitle": "Всё, что нужно. Ничего лишнего.",
+  "platformsTitle": "Скачайте для своей системы.",
+  "recommended": "Рекомендуем вам",
+  "versionLabel": "Версия"
 }
