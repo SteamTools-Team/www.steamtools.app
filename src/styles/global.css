@@ -469,6 +469,31 @@ html[data-os="linux"] [data-os-only="windows"] { display: none !important; }
   background: radial-gradient(closest-side at 70% 50%, rgb(109 79 232 / 0.22), transparent);
 }
 
+/* Manilua card */
+.manifest {
+  flex-direction: row; align-items: center; gap: clamp(18px, 3vw, 28px);
+  min-height: 0; margin-top: 12px;
+}
+.manifest .tile-icon { margin-bottom: 0; flex: none; }
+.manifest-body { flex: 1; min-width: 0; }
+.manifest h3 { margin-top: 0; }
+.manifest p { max-width: 560px; }
+.manifest .btn { flex: none; }
+.manifest .btn svg { width: 14px; height: 14px; }
+.manifest .btn:hover svg { transform: translate(2px, -2px); }
+.providers {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin-top: 16px; list-style: none;
+}
+.providers li {
+  padding: 4px 11px;
+  border-radius: var(--pill);
+  background: rgb(255 255 255 / 0.05);
+  border: 1px solid var(--line-strong);
+  font-size: 12.5px; font-weight: 600; color: var(--text);
+}
+.providers .providers-more { background: none; border-color: transparent; color: var(--subtle); font-weight: 500; }
+
 /* Platforms */
 .platforms {
   display: grid; grid-template-columns: repeat(2, 1fr);
@@ -711,6 +736,8 @@ main { flex: 1; display: flex; flex-direction: column; overflow-x: clip; }
   .tile, .tile-wide { min-height: 0; }
   .tile-wide::after { display: none; }
   .tile h3 { margin-top: 22px; }
+  .manifest { flex-direction: column; align-items: flex-start; }
+  .manifest .btn { width: 100%; }
   .stats { grid-template-columns: 1fr; }
   .stat { padding: 18px 16px; }
   .stat + .stat { border-inline-start: 0; border-top: 1px solid var(--line); }

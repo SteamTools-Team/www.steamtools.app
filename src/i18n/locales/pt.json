@@ -42,5 +42,10 @@
   "featuresTitle": "Tudo o que você precisa. Nada além.",
   "platformsTitle": "Baixe para o seu sistema.",
   "recommended": "Recomendado para você",
-  "versionLabel": "Versão"
+  "versionLabel": "Versão",
+  "manifestTitle": "Manifests Steam grátis para o SteamTools",
+  "manifestText": "Baixe scripts Lua e manifests de depots de qualquer jogo a partir de vários provedores, tudo em um só lugar. Grátis, rápido e sempre atualizado.",
+  "manifestCta": "Abrir Manilua",
+  "manifestProviders": "Provedores",
+  "manifestMore": "e mais"
 }

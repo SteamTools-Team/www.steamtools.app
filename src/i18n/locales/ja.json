@@ -42,5 +42,10 @@
   "featuresTitle": "必要なものすべて。余計なものはなし。",
   "platformsTitle": "お使いのシステム用にダウンロード。",
   "recommended": "おすすめ",
-  "versionLabel": "バージョン"
+  "versionLabel": "バージョン",
+  "manifestTitle": "SteamTools 向け無料 Steam マニフェスト",
+  "manifestText": "複数のプロバイダーから、あらゆるゲームの Lua スクリプトとデポマニフェストをまとめて入手。無料・高速・常に最新。",
+  "manifestCta": "Manilua を開く",
+  "manifestProviders": "プロバイダー",
+  "manifestMore": "ほか"
 }

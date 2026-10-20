@@ -21,6 +21,9 @@ export const links = {
   shop: 'https://shop.steamtools.app',
 };
 
+/** Shown on the Manilua card. */
+export const manifestProviders = ['SteamTools.app', 'DepotBox', 'Hubcap', 'Ryuu'];
+
 export const platforms: Record<Os, { name: string; file: string; url: string; configKey: string; fallbackMb: number }> = {
   windows: { name: 'Windows', file: 'SteamTools.exe', url: `${DOWNLOAD}/SteamTools.exe`, configKey: 'version', fallbackMb: 23.9 },
   linux: { name: 'Linux', file: 'SteamTools-linux', url: `${DOWNLOAD}/SteamTools-linux`, configKey: 'version-linux', fallbackMb: 10.1 },

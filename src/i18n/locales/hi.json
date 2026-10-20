@@ -42,5 +42,10 @@
   "featuresTitle": "वह सब जो आपको चाहिए। उससे ज़्यादा कुछ नहीं।",
   "platformsTitle": "अपने सिस्टम के लिए डाउनलोड करें।",
   "recommended": "आपके लिए अनुशंसित",
-  "versionLabel": "संस्करण"
+  "versionLabel": "संस्करण",
+  "manifestTitle": "SteamTools के लिए मुफ़्त Steam मैनिफ़ेस्ट",
+  "manifestText": "कई प्रोवाइडर्स से किसी भी गेम की Lua स्क्रिप्ट और डिपो मैनिफ़ेस्ट एक ही जगह पाएं। मुफ़्त, तेज़ और हमेशा अप-टू-डेट।",
+  "manifestCta": "Manilua खोलें",
+  "manifestProviders": "प्रोवाइडर्स",
+  "manifestMore": "और भी"
 }

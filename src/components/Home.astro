@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import appIcon from '../assets/app-icon.png';
 import Icon from './Icon.astro';
 import { getTranslation, type Locale } from '../i18n';
-import { getRelease, platforms, releaseDateApi, type Os } from '../site';
+import { getRelease, links, manifestProviders, platforms, releaseDateApi, type Os } from '../site';
 
 interface Props {
   locale: Locale;
@@ -95,6 +95,22 @@ const brand = [...'SteamTools'];
       </article>
     ))}
   </div>
+  <article class="tile spot manifest" data-reveal>
+    <span class="spot-glow" aria-hidden="true"></span>
+    <div class="tile-icon"><Icon name="layers" /></div>
+    <div class="manifest-body">
+      <h3>{t.manifestTitle}</h3>
+      <p>{t.manifestText}</p>
+      <ul class="providers" aria-label={t.manifestProviders}>
+        {manifestProviders.map((p) => <li>{p}</li>)}
+        <li class="providers-more">{t.manifestMore}</li>
+      </ul>
+    </div>
+    <a class="btn btn-primary" href={links.manifest} target="_blank" rel="noopener">
+      {t.manifestCta}
+      <Icon name="external" />
+    </a>
+  </article>
 </section>
 
 <section class="wrap section section-last" id="download">

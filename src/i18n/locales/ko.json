@@ -42,5 +42,10 @@
   "featuresTitle": "필요한 모든 것. 불필요한 것은 없이.",
   "platformsTitle": "사용 중인 시스템에 맞게 다운로드하세요.",
   "recommended": "추천",
-  "versionLabel": "버전"
+  "versionLabel": "버전",
+  "manifestTitle": "SteamTools용 무료 Steam 매니페스트",
+  "manifestText": "여러 제공자에서 모든 게임의 Lua 스크립트와 디포 매니페스트를 한곳에서 받으세요. 무료, 빠르고 항상 최신.",
+  "manifestCta": "Manilua 열기",
+  "manifestProviders": "제공자",
+  "manifestMore": "외 다수"
 }

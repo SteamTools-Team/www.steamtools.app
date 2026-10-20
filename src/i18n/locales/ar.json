@@ -42,5 +42,10 @@
   "featuresTitle": "كل ما تحتاجه، لا أكثر.",
   "platformsTitle": "حمّل الإصدار المناسب لنظامك.",
   "recommended": "موصى به لك",
-  "versionLabel": "الإصدار"
+  "versionLabel": "الإصدار",
+  "manifestTitle": "ملفات Manifest مجانية من Steam لـ SteamTools",
+  "manifestText": "احصل على سكربتات Lua وملفات Manifest للمستودعات لأي لعبة من عدة مزوّدين في مكان واحد. مجاني وسريع ومحدّث دائمًا.",
+  "manifestCta": "افتح Manilua",
+  "manifestProviders": "المزوّدون",
+  "manifestMore": "والمزيد"
 }

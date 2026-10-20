@@ -42,5 +42,10 @@
   "featuresTitle": "Alles, was du brauchst. Nichts, was du nicht brauchst.",
   "platformsTitle": "Für dein System herunterladen.",
   "recommended": "Für dich empfohlen",
-  "versionLabel": "Version"
+  "versionLabel": "Version",
+  "manifestTitle": "Kostenlose Steam-Manifeste für SteamTools",
+  "manifestText": "Lua-Skripte und Depot-Manifeste für jedes Spiel von mehreren Anbietern – alles an einem Ort. Kostenlos, schnell und immer aktuell.",
+  "manifestCta": "Manilua öffnen",
+  "manifestProviders": "Anbieter",
+  "manifestMore": "und mehr"
 }

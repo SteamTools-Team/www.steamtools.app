@@ -42,5 +42,10 @@
   "featuresTitle": "Alles wat je nodig hebt. Niets meer.",
   "platformsTitle": "Download voor jouw systeem.",
   "recommended": "Aanbevolen voor jou",
-  "versionLabel": "Versie"
+  "versionLabel": "Versie",
+  "manifestTitle": "Gratis Steam-manifests voor SteamTools",
+  "manifestText": "Haal Lua-scripts en depot-manifests voor elke game op bij meerdere providers, allemaal op één plek. Gratis, snel en altijd up-to-date.",
+  "manifestCta": "Manilua openen",
+  "manifestProviders": "Providers",
+  "manifestMore": "en meer"
 }

@@ -42,5 +42,10 @@
   "featuresTitle": "Semua yang Anda butuhkan. Tanpa yang tidak perlu.",
   "platformsTitle": "Unduh untuk sistem Anda.",
   "recommended": "Direkomendasikan untuk Anda",
-  "versionLabel": "Versi"
+  "versionLabel": "Versi",
+  "manifestTitle": "Manifest Steam gratis untuk SteamTools",
+  "manifestText": "Dapatkan skrip Lua dan manifest depot untuk game apa pun dari berbagai penyedia, semuanya di satu tempat. Gratis, cepat, dan selalu terbaru.",
+  "manifestCta": "Buka Manilua",
+  "manifestProviders": "Penyedia",
+  "manifestMore": "dan lainnya"
 }

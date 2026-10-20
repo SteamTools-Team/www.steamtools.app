@@ -42,5 +42,10 @@
   "featuresTitle": "İhtiyacınız olan her şey. Fazlası değil.",
   "platformsTitle": "Sisteminiz için indirin.",
   "recommended": "Sizin için önerilen",
-  "versionLabel": "Sürüm"
+  "versionLabel": "Sürüm",
+  "manifestTitle": "SteamTools için ücretsiz Steam manifestleri",
+  "manifestText": "Herhangi bir oyun için Lua betiklerini ve depo manifestlerini birden fazla sağlayıcıdan tek yerde alın. Ücretsiz, hızlı ve her zaman güncel.",
+  "manifestCta": "Manilua’yı aç",
+  "manifestProviders": "Sağlayıcılar",
+  "manifestMore": "ve daha fazlası"
 }

@@ -42,5 +42,10 @@
   "featuresTitle": "Mọi thứ bạn cần. Không gì thừa.",
   "platformsTitle": "Tải xuống cho hệ thống của bạn.",
   "recommended": "Đề xuất cho bạn",
-  "versionLabel": "Phiên bản"
+  "versionLabel": "Phiên bản",
+  "manifestTitle": "Manifest Steam miễn phí cho SteamTools",
+  "manifestText": "Tải script Lua và manifest depot cho mọi game từ nhiều nhà cung cấp, tất cả ở một nơi. Miễn phí, nhanh và luôn cập nhật.",
+  "manifestCta": "Mở Manilua",
+  "manifestProviders": "Nhà cung cấp",
+  "manifestMore": "và hơn nữa"
 }

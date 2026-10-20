@@ -42,5 +42,10 @@
   "featuresTitle": "Всё, что нужно. Ничего лишнего.",
   "platformsTitle": "Скачайте для своей системы.",
   "recommended": "Рекомендуем вам",
-  "versionLabel": "Версия"
+  "versionLabel": "Версия",
+  "manifestTitle": "Бесплатные манифесты Steam для SteamTools",
+  "manifestText": "Lua-скрипты и манифесты депо для любой игры от нескольких провайдеров в одном месте. Бесплатно, быстро и всегда актуально.",
+  "manifestCta": "Открыть Manilua",
+  "manifestProviders": "Провайдеры",
+  "manifestMore": "и другие"
 }

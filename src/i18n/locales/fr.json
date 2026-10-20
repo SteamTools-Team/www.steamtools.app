@@ -42,5 +42,10 @@
   "featuresTitle": "Tout ce qu'il faut. Rien de superflu.",
   "platformsTitle": "Téléchargez pour votre système.",
   "recommended": "Recommandé pour vous",
-  "versionLabel": "Version"
+  "versionLabel": "Version",
+  "manifestTitle": "Manifests Steam gratuits pour SteamTools",
+  "manifestText": "Récupérez les scripts Lua et les manifests de dépôts de n’importe quel jeu depuis plusieurs providers, au même endroit. Gratuit, rapide et toujours à jour.",
+  "manifestCta": "Ouvrir Manilua",
+  "manifestProviders": "Providers",
+  "manifestMore": "et plus"
 }

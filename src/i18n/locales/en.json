@@ -42,5 +42,10 @@
   "featuresTitle": "Everything you need. Nothing you don't.",
   "platformsTitle": "Download for your system.",
   "recommended": "Recommended for you",
-  "versionLabel": "Version"
+  "versionLabel": "Version",
+  "manifestTitle": "Free Steam manifests for SteamTools",
+  "manifestText": "Grab Lua scripts and depot manifests for any game from multiple providers, all in one place. Free, fast and always up to date.",
+  "manifestCta": "Open Manilua",
+  "manifestProviders": "Providers",
+  "manifestMore": "& more"
 }

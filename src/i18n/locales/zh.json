@@ -42,5 +42,10 @@
   "featuresTitle": "你需要的一切，仅此而已。",
   "platformsTitle": "下载适合你系统的版本。",
   "recommended": "为你推荐",
-  "versionLabel": "版本"
+  "versionLabel": "版本",
+  "manifestTitle": "SteamTools 免费 Steam 清单",
+  "manifestText": "从多个提供源获取任意游戏的 Lua 脚本和仓库清单，一站搞定。免费、快速、始终最新。",
+  "manifestCta": "打开 Manilua",
+  "manifestProviders": "提供源",
+  "manifestMore": "更多"
 }
