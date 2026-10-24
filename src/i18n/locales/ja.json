@@ -47,5 +47,16 @@
   "manifestText": "複数のプロバイダーから、あらゆるゲームの Lua スクリプトとデポマニフェストをまとめて入手。無料・高速・常に最新。",
   "manifestCta": "Manilua を開く",
   "manifestProviders": "プロバイダー",
-  "manifestMore": "ほか"
+  "manifestMore": "ほか",
+  "blockedTitle": "ダウンロードがブロックされましたか？",
+  "blockedText": "Chrome や Windows SmartScreen が SteamTools をウイルスとして検出することがあります。これは誤検知です。SteamTools はオープンソースですが、EV コード署名証明書で署名されていません。証明書のない新しいアプリは、既定でブロックされます。",
+  "blockedSteps": [
+    "スタートメニューで「PowerShell」を検索し、右クリックして「管理者として実行」を選びます。",
+    "次のコマンドを貼り付けて Enter を押します：",
+    "SteamTools が GitHub からダウンロードされ、自動的に起動します。"
+  ],
+  "blockedCopy": "コピー",
+  "blockedCopied": "コピーしました！",
+  "blockedClose": "わかりました",
+  "blockedScript": "このコマンドの内容を見る"
 }

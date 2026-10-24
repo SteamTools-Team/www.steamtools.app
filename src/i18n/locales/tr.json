@@ -47,5 +47,16 @@
   "manifestText": "Herhangi bir oyun için Lua betiklerini ve depo manifestlerini birden fazla sağlayıcıdan tek yerde alın. Ücretsiz, hızlı ve her zaman güncel.",
   "manifestCta": "Manilua’yı aç",
   "manifestProviders": "Sağlayıcılar",
-  "manifestMore": "ve daha fazlası"
+  "manifestMore": "ve daha fazlası",
+  "blockedTitle": "İndirme engellendi mi?",
+  "blockedText": "Chrome veya Windows SmartScreen, SteamTools’u virüs olarak işaretleyebilir. Bu bir yanlış alarm: SteamTools açık kaynaklıdır ancak bir EV kod imzalama sertifikasıyla imzalanmamıştır. Bu sertifika olmadan her yeni imzasız uygulama varsayılan olarak engellenir.",
+  "blockedSteps": [
+    "Başlat menüsünde “PowerShell” arayın, sağ tıklayın ve “Yönetici olarak çalıştır”ı seçin.",
+    "Bu komutu yapıştırın ve Enter’a basın:",
+    "SteamTools GitHub’ımızdan indirilir ve otomatik olarak açılır."
+  ],
+  "blockedCopy": "Kopyala",
+  "blockedCopied": "Kopyalandı!",
+  "blockedClose": "Anladım",
+  "blockedScript": "Bu komutun ne yaptığını gör"
 }

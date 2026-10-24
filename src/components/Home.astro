@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import appIcon from '../assets/app-icon.png';
 import Icon from './Icon.astro';
 import { getTranslation, type Locale } from '../i18n';
-import { getRelease, links, manifestProviders, platforms, releaseDateApi, type Os } from '../site';
+import { getRelease, installCommand, installScript, links, manifestProviders, platforms, releaseDateApi, type Os } from '../site';
 
 interface Props {
   locale: Locale;
@@ -138,6 +138,57 @@ const brand = [...'SteamTools'];
     ))}
   </div>
 </section>
+
+<dialog class="blocked" id="blocked" aria-labelledby="blocked-title">
+  <div class="blocked-card">
+    <div class="tile-icon"><Icon name="shield" /></div>
+    <h2 id="blocked-title">{t.blockedTitle}</h2>
+    <p>{t.blockedText}</p>
+    <ol class="blocked-steps">
+      <li>{t.blockedSteps[0]}</li>
+      <li>
+        {t.blockedSteps[1]}
+        <div class="cmd" dir="ltr">
+          <code>{installCommand}</code>
+          <button class="btn btn-ghost btn-sm" type="button" data-copy={installCommand} data-copied={t.blockedCopied}>{t.blockedCopy}</button>
+        </div>
+      </li>
+      <li>{t.blockedSteps[2]}</li>
+    </ol>
+    <div class="blocked-actions">
+      <a class="link-arrow" href={installScript} target="_blank" rel="noopener">
+        {t.blockedScript}
+        <Icon name="arrow" />
+      </a>
+      <button class="btn btn-primary btn-sm" type="button" data-close>{t.blockedClose}</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+  // Windows download: browsers/SmartScreen often block the unsigned .exe, so explain the PowerShell alternative.
+  const dialog = document.querySelector<HTMLDialogElement>('#blocked');
+  if (dialog) {
+    document.querySelectorAll<HTMLAnchorElement>('a[download="SteamTools.exe"]').forEach((a) => {
+      a.addEventListener('click', () => setTimeout(() => dialog.open || dialog.showModal(), 600));
+    });
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog || (e.target as Element).closest('[data-close]')) dialog.close();
+    });
+    const copy = dialog.querySelector<HTMLButtonElement>('[data-copy]')!;
+    const label = copy.textContent;
+    copy.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(copy.dataset.copy!);
+      } catch {
+        getSelection()?.selectAllChildren(dialog.querySelector('.cmd code')!);
+        return;
+      }
+      copy.textContent = copy.dataset.copied!;
+      setTimeout(() => (copy.textContent = label), 2000);
+    });
+  }
+</script>
 
 <script is:inline define:vars={{ api: releaseDateApi }}>
   // Refresh the release date (cached 1h to stay under GitHub's rate limit).

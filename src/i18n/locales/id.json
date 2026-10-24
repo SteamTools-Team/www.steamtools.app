@@ -47,5 +47,16 @@
   "manifestText": "Dapatkan skrip Lua dan manifest depot untuk game apa pun dari berbagai penyedia, semuanya di satu tempat. Gratis, cepat, dan selalu terbaru.",
   "manifestCta": "Buka Manilua",
   "manifestProviders": "Penyedia",
-  "manifestMore": "dan lainnya"
+  "manifestMore": "dan lainnya",
+  "blockedTitle": "Unduhan diblokir?",
+  "blockedText": "Chrome atau Windows SmartScreen mungkin mendeteksi SteamTools sebagai virus. Ini adalah positif palsu: SteamTools bersifat open source, tetapi tidak ditandatangani dengan sertifikat EV. Tanpa sertifikat itu, setiap aplikasi baru yang tidak ditandatangani diblokir secara default.",
+  "blockedSteps": [
+    "Cari “PowerShell” di menu Start, klik kanan, lalu pilih “Run as administrator”.",
+    "Tempel perintah ini lalu tekan Enter:",
+    "SteamTools akan diunduh dari GitHub kami dan terbuka otomatis."
+  ],
+  "blockedCopy": "Salin",
+  "blockedCopied": "Tersalin!",
+  "blockedClose": "Mengerti",
+  "blockedScript": "Lihat apa yang dilakukan perintah ini"
 }

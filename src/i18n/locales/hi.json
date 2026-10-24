@@ -47,5 +47,16 @@
   "manifestText": "कई प्रोवाइडर्स से किसी भी गेम की Lua स्क्रिप्ट और डिपो मैनिफ़ेस्ट एक ही जगह पाएं। मुफ़्त, तेज़ और हमेशा अप-टू-डेट।",
   "manifestCta": "Manilua खोलें",
   "manifestProviders": "प्रोवाइडर्स",
-  "manifestMore": "और भी"
+  "manifestMore": "और भी",
+  "blockedTitle": "डाउनलोड ब्लॉक हो गया?",
+  "blockedText": "Chrome या Windows SmartScreen, SteamTools को वायरस के रूप में चिह्नित कर सकते हैं। यह एक गलत चेतावनी है: SteamTools ओपन सोर्स है, लेकिन यह EV कोड-साइनिंग सर्टिफिकेट से साइन नहीं है। इसके बिना हर नया बिना साइन किया ऐप डिफ़ॉल्ट रूप से ब्लॉक होता है।",
+  "blockedSteps": [
+    "Start मेनू में “PowerShell” खोजें, उस पर राइट-क्लिक करें और “Run as administrator” चुनें।",
+    "यह कमांड पेस्ट करें और Enter दबाएँ:",
+    "SteamTools हमारे GitHub से डाउनलोड होकर अपने आप खुल जाएगा।"
+  ],
+  "blockedCopy": "कॉपी करें",
+  "blockedCopied": "कॉपी हो गया!",
+  "blockedClose": "समझ गया",
+  "blockedScript": "देखें यह कमांड क्या करता है"
 }

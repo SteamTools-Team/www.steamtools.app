@@ -724,6 +724,55 @@ main { flex: 1; display: flex; flex-direction: column; overflow-x: clip; }
   .bg-orbs .o3 { animation: orb3 22s ease-in-out infinite alternate !important; }
 }
 
+/* ── "Download blocked?" dialog ─────────────────────────────── */
+.blocked {
+  width: min(520px, calc(100% - 2 * var(--gutter)));
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, #16161b, #0d0d10);
+  color: var(--text);
+  box-shadow: 0 40px 80px -30px rgb(0 0 0 / 0.9), 0 0 0 1px rgb(143 125 255 / 0.08);
+}
+.blocked[open] { animation: pop 0.35s var(--ease); }
+.blocked::backdrop {
+  background: rgb(0 0 0 / 0.6);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.blocked-card { padding: clamp(22px, 4vw, 30px); }
+.blocked h2 {
+  margin-top: 18px;
+  font-family: var(--font-display);
+  font-size: 23px; font-weight: 700;
+  letter-spacing: -0.03em; line-height: 1.15;
+}
+.blocked p { margin-top: 8px; font-size: 14.5px; color: var(--muted); }
+.blocked-steps {
+  display: grid; gap: 12px;
+  margin-top: 20px; padding-inline-start: 20px;
+  font-size: 14.5px;
+}
+.blocked-steps li::marker { color: var(--accent); font-weight: 700; }
+.cmd {
+  display: flex; align-items: center; gap: 10px;
+  margin-top: 8px; padding: 8px 8px 8px 14px;
+  border-radius: var(--radius-sm);
+  background: #000;
+  border: 1px solid var(--line-strong);
+}
+.cmd code {
+  flex: 1; min-width: 0;
+  overflow-x: auto; white-space: nowrap;
+  font: 500 13.5px/1.4 ui-monospace, "Cascadia Code", Consolas, monospace;
+  color: var(--accent);
+}
+.blocked-actions {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  margin-top: 24px; flex-wrap: wrap;
+}
+
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 860px) {
   .nav-links { display: none; }

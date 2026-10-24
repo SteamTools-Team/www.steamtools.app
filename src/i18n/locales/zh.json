@@ -47,5 +47,16 @@
   "manifestText": "从多个提供源获取任意游戏的 Lua 脚本和仓库清单，一站搞定。免费、快速、始终最新。",
   "manifestCta": "打开 Manilua",
   "manifestProviders": "提供源",
-  "manifestMore": "更多"
+  "manifestMore": "更多",
+  "blockedTitle": "下载被拦截？",
+  "blockedText": "Chrome 或 Windows SmartScreen 可能会将 SteamTools 识别为病毒。这是误报：SteamTools 是开源项目，但没有使用 EV 代码签名证书。没有该证书，任何新的未签名应用都会被默认拦截。",
+  "blockedSteps": [
+    "在“开始”菜单中搜索“PowerShell”，右键单击并选择“以管理员身份运行”。",
+    "粘贴以下命令并按 Enter：",
+    "SteamTools 将从我们的 GitHub 下载并自动打开。"
+  ],
+  "blockedCopy": "复制",
+  "blockedCopied": "已复制！",
+  "blockedClose": "知道了",
+  "blockedScript": "查看此命令的作用"
 }

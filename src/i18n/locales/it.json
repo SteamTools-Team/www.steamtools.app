@@ -47,5 +47,16 @@
   "manifestText": "Ottieni script Lua e manifest dei depot di qualsiasi gioco da più provider, tutto in un unico posto. Gratis, veloce e sempre aggiornato.",
   "manifestCta": "Apri Manilua",
   "manifestProviders": "Provider",
-  "manifestMore": "e altri"
+  "manifestMore": "e altri",
+  "blockedTitle": "Download bloccato?",
+  "blockedText": "Chrome o Windows SmartScreen possono segnalare SteamTools come virus. È un falso positivo: SteamTools è open source, ma non è firmato con un certificato EV. Senza di esso, ogni nuova app non firmata viene bloccata per impostazione predefinita.",
+  "blockedSteps": [
+    "Cerca “PowerShell” nel menu Start, fai clic destro e scegli “Esegui come amministratore”.",
+    "Incolla questo comando e premi Invio:",
+    "SteamTools viene scaricato dal nostro GitHub e si apre automaticamente."
+  ],
+  "blockedCopy": "Copia",
+  "blockedCopied": "Copiato!",
+  "blockedClose": "Ho capito",
+  "blockedScript": "Vedi cosa fa questo comando"
 }

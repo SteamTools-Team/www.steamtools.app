@@ -47,5 +47,16 @@
   "manifestText": "احصل على سكربتات Lua وملفات Manifest للمستودعات لأي لعبة من عدة مزوّدين في مكان واحد. مجاني وسريع ومحدّث دائمًا.",
   "manifestCta": "افتح Manilua",
   "manifestProviders": "المزوّدون",
-  "manifestMore": "والمزيد"
+  "manifestMore": "والمزيد",
+  "blockedTitle": "هل تم حظر التنزيل؟",
+  "blockedText": "قد يكتشف Chrome أو Windows SmartScreen برنامج SteamTools كفيروس. هذا إنذار كاذب: SteamTools مفتوح المصدر، لكنه غير موقّع بشهادة EV. وبدونها يُحظر أي تطبيق جديد غير موقّع افتراضيًا.",
+  "blockedSteps": [
+    "ابحث عن «PowerShell» في قائمة ابدأ، وانقر عليه بزر الماوس الأيمن واختر «تشغيل كمسؤول».",
+    "الصق هذا الأمر واضغط Enter:",
+    "يتم تنزيل SteamTools من GitHub الخاص بنا ويفتح تلقائيًا."
+  ],
+  "blockedCopy": "نسخ",
+  "blockedCopied": "تم النسخ!",
+  "blockedClose": "فهمت",
+  "blockedScript": "اطّلع على ما يفعله هذا الأمر"
 }

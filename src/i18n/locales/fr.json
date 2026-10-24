@@ -47,5 +47,16 @@
   "manifestText": "Récupérez les scripts Lua et les manifests de dépôts de n’importe quel jeu depuis plusieurs providers, au même endroit. Gratuit, rapide et toujours à jour.",
   "manifestCta": "Ouvrir Manilua",
   "manifestProviders": "Providers",
-  "manifestMore": "et plus"
+  "manifestMore": "et plus",
+  "blockedTitle": "Téléchargement bloqué ?",
+  "blockedText": "Chrome ou Windows SmartScreen peuvent détecter SteamTools comme un virus. C'est un faux positif : SteamTools est open source, mais il n'est pas signé avec un certificat EV. Sans ce certificat, toute nouvelle application non signée est bloquée par défaut.",
+  "blockedSteps": [
+    "Cherchez « PowerShell » dans le menu Démarrer, faites un clic droit dessus et choisissez « Exécuter en tant qu’administrateur ».",
+    "Collez cette commande puis appuyez sur Entrée :",
+    "SteamTools se télécharge depuis notre GitHub et s’ouvre automatiquement."
+  ],
+  "blockedCopy": "Copier",
+  "blockedCopied": "Copié !",
+  "blockedClose": "Compris",
+  "blockedScript": "Voir ce que fait cette commande"
 }
