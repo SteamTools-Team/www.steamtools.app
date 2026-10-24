@@ -55,8 +55,6 @@
     "Wklej to polecenie i naciśnij Enter:",
     "SteamTools pobierze się z naszego GitHuba i uruchomi automatycznie."
   ],
-  "blockedCopy": "Kopiuj",
-  "blockedCopied": "Skopiowano!",
   "blockedClose": "Rozumiem",
   "blockedScript": "Zobacz, co robi to polecenie"
 }

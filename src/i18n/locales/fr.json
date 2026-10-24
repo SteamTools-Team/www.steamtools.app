@@ -55,8 +55,6 @@
     "Collez cette commande puis appuyez sur Entrée :",
     "SteamTools se télécharge depuis notre GitHub et s’ouvre automatiquement."
   ],
-  "blockedCopy": "Copier",
-  "blockedCopied": "Copié !",
   "blockedClose": "Compris",
   "blockedScript": "Voir ce que fait cette commande"
 }

@@ -55,8 +55,6 @@
     "이 명령을 붙여넣고 Enter 키를 누르세요:",
     "SteamTools가 GitHub에서 다운로드되고 자동으로 실행됩니다."
   ],
-  "blockedCopy": "복사",
-  "blockedCopied": "복사됨!",
   "blockedClose": "확인",
   "blockedScript": "이 명령이 하는 일 보기"
 }

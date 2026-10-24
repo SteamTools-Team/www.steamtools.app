@@ -55,8 +55,6 @@
     "次のコマンドを貼り付けて Enter を押します：",
     "SteamTools が GitHub からダウンロードされ、自動的に起動します。"
   ],
-  "blockedCopy": "コピー",
-  "blockedCopied": "コピーしました！",
   "blockedClose": "わかりました",
   "blockedScript": "このコマンドの内容を見る"
 }

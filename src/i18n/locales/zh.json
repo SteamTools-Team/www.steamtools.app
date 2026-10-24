@@ -55,8 +55,6 @@
     "粘贴以下命令并按 Enter：",
     "SteamTools 将从我们的 GitHub 下载并自动打开。"
   ],
-  "blockedCopy": "复制",
-  "blockedCopied": "已复制！",
   "blockedClose": "知道了",
   "blockedScript": "查看此命令的作用"
 }

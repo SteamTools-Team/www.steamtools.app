@@ -55,8 +55,6 @@
     "Paste this command and press Enter:",
     "SteamTools downloads from our GitHub and opens automatically."
   ],
-  "blockedCopy": "Copy",
-  "blockedCopied": "Copied!",
   "blockedClose": "Got it",
   "blockedScript": "See what this command does"
 }

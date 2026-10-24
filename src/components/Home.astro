@@ -150,7 +150,6 @@ const brand = [...'SteamTools'];
         {t.blockedSteps[1]}
         <div class="cmd" dir="ltr">
           <code>{installCommand}</code>
-          <button class="btn btn-ghost btn-sm" type="button" data-copy={installCommand} data-copied={t.blockedCopied}>{t.blockedCopy}</button>
         </div>
       </li>
       <li>{t.blockedSteps[2]}</li>
@@ -174,18 +173,6 @@ const brand = [...'SteamTools'];
     });
     dialog.addEventListener('click', (e) => {
       if (e.target === dialog || (e.target as Element).closest('[data-close]')) dialog.close();
-    });
-    const copy = dialog.querySelector<HTMLButtonElement>('[data-copy]')!;
-    const label = copy.textContent;
-    copy.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(copy.dataset.copy!);
-      } catch {
-        getSelection()?.selectAllChildren(dialog.querySelector('.cmd code')!);
-        return;
-      }
-      copy.textContent = copy.dataset.copied!;
-      setTimeout(() => (copy.textContent = label), 2000);
     });
   }
 </script>
