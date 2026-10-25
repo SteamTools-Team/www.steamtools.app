@@ -59,7 +59,7 @@ const ogImage = new URL('/assets/fav.ico', site).href;
     {locale && locales.map((l) => (
       <link rel="alternate" hreflang={l.hreflang} href={new URL(`/${l.path}/`, site).href} />
     ))}
-    {locale && <link rel="alternate" hreflang="x-default" href={site.href} />}
+    {locale && <link rel="alternate" hreflang="x-default" href={new URL(`/${defaultLocale.path}/`, site).href} />}
     {canonical && (
       <>
         <meta property="og:type" content="website" />

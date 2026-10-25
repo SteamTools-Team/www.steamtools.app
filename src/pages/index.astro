@@ -7,7 +7,8 @@ const t = getTranslation(defaultLocale.code);
 // Browser language (2 letters) -> page. Unknown languages fall back to English.
 const map: Record<string, string> = Object.fromEntries(locales.map((l) => [l.code, l.path]));
 ---
-<Base title={t.title} description={t.description} locale={defaultLocale} path="/" home>
+<!-- Same content as /en-EN/: declare it as canonical so Google doesn't index a duplicate. -->
+<Base title={t.title} description={t.description} locale={defaultLocale} path={`/${defaultLocale.path}/`} home>
   <script is:inline slot="head" define:vars={{ map, fallback: defaultLocale.path }}>
     (function () {
       var l;

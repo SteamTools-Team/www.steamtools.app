@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { locales } from '../i18n';
+import { defaultLocale, locales } from '../i18n';
 
 export const GET: APIRoute = ({ site }) => {
   const url = (path: string) => new URL(path, site).href;
@@ -12,12 +12,12 @@ export const GET: APIRoute = ({ site }) => {
     <lastmod>${lastmod}</lastmod>
     <priority>${priority}</priority>
 ${alternates}
-    <xhtml:link rel="alternate" hreflang="x-default" href="${url('/')}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${url(`/${defaultLocale.path}/`)}"/>
   </url>`;
 
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${[entry('/', '1.0'), ...locales.map((l) => entry(`/${l.path}/`, '0.9'))].join('\n')}
+${locales.map((l) => entry(`/${l.path}/`, l === defaultLocale ? '1.0' : '0.9')).join('\n')}
 </urlset>
 `;
   return new Response(body, { headers: { 'Content-Type': 'application/xml; charset=utf-8' } });
