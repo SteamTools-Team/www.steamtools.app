@@ -1,6 +1,6 @@
 {
   "title": "SteamTools — Tải xuống chính thức | Sửa lỗi, Lua & Manifest",
-  "description": "Tải SteamTools miễn phí — bộ công cụ Steam với sửa lỗi game, nhà cung cấp Lua/Manifest, cập nhật manifest kho và bản di động. Được hơn 150.000 game thủ tin dùng.",
+  "description": "Tải SteamTools miễn phí — bộ công cụ Steam với sửa lỗi game, nhà cung cấp Lua/Manifest, cập nhật manifest kho và bản di động. Hỗ trợ hơn 150.000 game.",
   "tagline": "Bộ công cụ Steam miễn phí: sửa lỗi game, nhà cung cấp Lua/Manifest, manifest kho và bản di động — tất cả trong một.",
   "download": "Tải xuống",
   "installer": "Tải xuống — Trình cài đặt",
@@ -31,7 +31,7 @@
     },
     {
       "title": "An toàn",
-      "text": "Bản dựng lưu trên GitHub, được xác minh và ký ở mỗi bản phát hành."
+      "text": "Bản dựng lưu trên GitHub, được xác minh ở mỗi bản phát hành."
     }
   ],
   "footerSince": "© Từ 2025 SteamTools",
@@ -56,5 +56,38 @@
     "SteamTools sẽ được tải từ GitHub của chúng tôi và tự động mở."
   ],
   "blockedClose": "Đã hiểu",
-  "blockedScript": "Xem lệnh này làm gì"
+  "blockedScript": "Xem lệnh này làm gì",
+  "heading": "Bộ công cụ Steam miễn phí",
+  "navFaq": "FAQ",
+  "faqTitle": "Câu hỏi thường gặp",
+  "faq": [
+    {
+      "q": "SteamTools là gì?",
+      "a": "SteamTools là bộ công cụ Steam miễn phí, gộp sửa lỗi game, nhà cung cấp Lua/Manifest, cập nhật manifest kho và bản di động vào một ứng dụng gọn nhẹ."
+    },
+    {
+      "q": "SteamTools có miễn phí không?",
+      "a": "Có. SteamTools hoàn toàn miễn phí để tải và sử dụng."
+    },
+    {
+      "q": "SteamTools có an toàn không? Vì sao phần mềm diệt virus cảnh báo?",
+      "a": "SteamTools được lưu trữ trên GitHub và được xác minh ở mỗi bản phát hành. Một số phần mềm diệt virus, Chrome hoặc Windows SmartScreen có thể cảnh báo vì ứng dụng chưa được ký bằng chứng chỉ ký mã EV. Đây là cảnh báo nhầm, xảy ra với hầu hết ứng dụng mới chưa ký."
+    },
+    {
+      "q": "Cài đặt SteamTools như thế nào?",
+      "a": "Tải SteamTools cho hệ điều hành của bạn và chạy — không cần cài đặt. Nếu trình duyệt chặn tải xuống, hãy dùng trình cài đặt PowerShell trong cửa sổ “Tải xuống bị chặn?”."
+    },
+    {
+      "q": "Script Lua và manifest là gì?",
+      "a": "Script Lua và manifest kho là các tệp SteamTools dùng để thêm và cập nhật game. Bạn có thể lấy miễn phí trên Manilua (manilua.steamtools.app), nơi tập hợp nhiều nhà cung cấp."
+    },
+    {
+      "q": "SteamTools hỗ trợ hệ điều hành nào?",
+      "a": "SteamTools có cho Windows và Linux."
+    },
+    {
+      "q": "Làm sao để được hỗ trợ hoặc báo lỗi?",
+      "a": "Tham gia Discord SteamTools để được hỗ trợ, báo lỗi và theo dõi cập nhật."
+    }
+  ]
 }

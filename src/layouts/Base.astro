@@ -6,7 +6,7 @@ import { Image } from 'astro:assets';
 import appIcon from '../assets/app-icon.png';
 import Icon from '../components/Icon.astro';
 import { defaultLocale, getTranslation, locales, type Locale } from '../i18n';
-import { configUrl, getRelease, links } from '../site';
+import { configUrl, discordInvite, getRelease, links, platforms } from '../site';
 
 interface Props {
   title: string;
@@ -23,11 +23,51 @@ interface Props {
 const { title, description, locale, path, home = false, noindex = false } = Astro.props;
 const lang = locale ?? defaultLocale;
 const t = getTranslation(lang.code);
-const { versions } = await getRelease();
+const { versions, sizesMb, date } = await getRelease();
 const site = Astro.site!;
 const canonical = path ? new URL(path, site).href : undefined;
 const homeHref = locale ? `/${locale.path}/` : '/';
-const ogImage = new URL('/assets/fav.ico', site).href;
+const ogImage = new URL('/assets/og.jpg', site).href;
+
+// Structured data (schema.org) so Google understands the brand, the site and the app.
+const siteUrl = site.href;
+const organizationId = `${siteUrl}#organization`;
+const jsonLd = canonical && {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': organizationId,
+      name: 'SteamTools',
+      url: siteUrl,
+      logo: new URL('/assets/logo.png', site).href,
+      sameAs: [links.github, discordInvite],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}#website`,
+      name: 'SteamTools',
+      url: siteUrl,
+      inLanguage: lang.hreflang,
+      publisher: { '@id': organizationId },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      name: 'SteamTools',
+      url: canonical,
+      description,
+      image: ogImage,
+      applicationCategory: 'UtilitiesApplication',
+      operatingSystem: 'Windows, Linux',
+      softwareVersion: versions.windows,
+      ...(date && { dateModified: date }),
+      downloadUrl: platforms.windows.url,
+      fileSize: `${sizesMb.windows} MB`,
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      publisher: { '@id': organizationId },
+    },
+  ],
+};
 ---
 <!doctype html>
 <html lang={lang.hreflang} dir={lang.dir}>
@@ -53,7 +93,7 @@ const ogImage = new URL('/assets/fav.ico', site).href;
     {noindex && <meta name="robots" content="noindex" />}
     <meta name="theme-color" content="#000000" />
     <link rel="icon" href="/assets/fav.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="/assets/fav.ico" />
+    <link rel="apple-touch-icon" href="/assets/logo.png" />
     <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin />
     {canonical && <link rel="canonical" href={canonical} />}
     {locale && locales.map((l) => (
@@ -68,8 +108,15 @@ const ogImage = new URL('/assets/fav.ico', site).href;
         {description && <meta property="og:description" content={description} />}
         <meta property="og:url" content={canonical} />
         <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="SteamTools" />
         <meta property="og:locale" content={lang.intl.split('-u-')[0].replace('-', '_')} />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        {description && <meta name="twitter:description" content={description} />}
+        <meta name="twitter:image" content={ogImage} />
+        <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
       </>
     )}
     <slot name="head" />
@@ -89,6 +136,7 @@ const ogImage = new URL('/assets/fav.ico', site).href;
         </a>
         <nav class="nav-links" aria-label="Primary">
           {home && <a href="#features">{t.navFeatures}</a>}
+          {home && <a href="#faq">{t.navFaq}</a>}
           <a href={links.manifest} target="_blank" rel="noopener">Manifest</a>
           <a href={links.shop} target="_blank" rel="noopener">Premium</a>
         </nav>

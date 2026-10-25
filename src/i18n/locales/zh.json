@@ -1,6 +1,6 @@
 {
   "title": "SteamTools — 官方下载 | 游戏修复、Lua 与 Manifest",
-  "description": "下载 SteamTools，免费 Steam 工具包，提供游戏修复、Lua/Manifest 提供器、存储库清单更新和便携版。深受 150,000+ 玩家信赖。",
+  "description": "下载 SteamTools，免费 Steam 工具包，提供游戏修复、Lua/Manifest 提供器、存储库清单更新和便携版。支持 150,000+ 款游戏。",
   "tagline": "免费 Steam 工具包：游戏修复、Lua/Manifest 提供器、存储库清单和便携版 —— 集于一体。",
   "download": "下载",
   "installer": "下载 — 安装程序",
@@ -31,7 +31,7 @@
     },
     {
       "title": "安全",
-      "text": "由 GitHub 托管，每个版本均经过验证和签名。"
+      "text": "由 GitHub 托管，每个版本均经过验证。"
     }
   ],
   "footerSince": "© 自 2025 年 SteamTools",
@@ -56,5 +56,38 @@
     "SteamTools 将从我们的 GitHub 下载并自动打开。"
   ],
   "blockedClose": "知道了",
-  "blockedScript": "查看此命令的作用"
+  "blockedScript": "查看此命令的作用",
+  "heading": "免费 Steam 工具包",
+  "navFaq": "常见问题",
+  "faqTitle": "常见问题",
+  "faq": [
+    {
+      "q": "什么是 SteamTools？",
+      "a": "SteamTools 是一款免费的 Steam 工具包，将游戏修复、Lua/Manifest 提供器、存储库清单更新和便携版整合在一个轻量应用中。"
+    },
+    {
+      "q": "SteamTools 免费吗？",
+      "a": "是的。SteamTools 可完全免费下载和使用。"
+    },
+    {
+      "q": "SteamTools 安全吗？为什么杀毒软件会报毒？",
+      "a": "SteamTools 托管在 GitHub 上，每个版本都经过验证。由于应用没有使用 EV 代码签名证书签名，部分杀毒软件、Chrome 或 Windows SmartScreen 可能会将其标记。这属于误报，大多数未签名的新应用都会遇到。"
+    },
+    {
+      "q": "如何安装 SteamTools？",
+      "a": "下载适合你系统的 SteamTools 并直接运行，无需安装。如果浏览器拦截了下载，请使用“下载被拦截？”窗口中的 PowerShell 安装命令。"
+    },
+    {
+      "q": "什么是 Lua 脚本和清单？",
+      "a": "Lua 脚本和存储库清单是 SteamTools 用来添加和更新游戏的文件。你可以在 Manilua（manilua.steamtools.app）免费获取，它汇集了多个提供源。"
+    },
+    {
+      "q": "SteamTools 支持哪些系统？",
+      "a": "SteamTools 支持 Windows 和 Linux。"
+    },
+    {
+      "q": "如何获取帮助或反馈问题？",
+      "a": "加入 SteamTools Discord，获取帮助、反馈问题并关注更新。"
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "title": "SteamTools — Resmi İndirme | Düzeltmeler, Lua ve Manifest",
-  "description": "SteamToolsu ücretsiz indirin — oyun düzeltmeleri, Lua/Manifest sağlayıcısı, depot manifest güncellemeleri ve taşınabilir sürümler içeren ücretsiz Steam araç takımı. 150.000den fazla oyuncunun güvenini kazanmıştır.",
+  "description": "SteamTools'u ücretsiz indirin — oyun düzeltmeleri, Lua/Manifest sağlayıcısı, depot manifest güncellemeleri ve taşınabilir sürümler içeren ücretsiz Steam araç takımı. 150.000'den fazla oyunu destekler.",
   "tagline": "Ücretsiz Steam araç takımı: oyun düzeltmeleri, Lua/Manifest sağlayıcısı, depot manifestleri ve taşınabilir sürümler — hepsi bir arada.",
   "download": "İndir",
   "installer": "İndir — Kurulumcu",
@@ -31,7 +31,7 @@
     },
     {
       "title": "Güvenli",
-      "text": "GitHub üzerinde barındırılan, her sürümde doğrulanmış ve imzalanmış yapılar."
+      "text": "GitHub üzerinde barındırılan, her sürümde doğrulanmış yapılar."
     }
   ],
   "footerSince": "© 2025ten beri SteamTools",
@@ -56,5 +56,38 @@
     "SteamTools GitHub’ımızdan indirilir ve otomatik olarak açılır."
   ],
   "blockedClose": "Anladım",
-  "blockedScript": "Bu komutun ne yaptığını gör"
+  "blockedScript": "Bu komutun ne yaptığını gör",
+  "heading": "Ücretsiz Steam araç takımı",
+  "navFaq": "SSS",
+  "faqTitle": "Sık sorulan sorular",
+  "faq": [
+    {
+      "q": "SteamTools nedir?",
+      "a": "SteamTools; oyun düzeltmelerini, bir Lua/Manifest sağlayıcısını, depot manifest güncellemelerini ve taşınabilir sürümleri tek bir hafif uygulamada bir araya getiren ücretsiz bir Steam araç takımıdır."
+    },
+    {
+      "q": "SteamTools ücretsiz mi?",
+      "a": "Evet. SteamTools'u indirmek ve kullanmak tamamen ücretsizdir."
+    },
+    {
+      "q": "SteamTools güvenli mi? Antivirüsüm neden uyarı veriyor?",
+      "a": "SteamTools GitHub'da barındırılır ve her sürümde doğrulanır. Uygulama bir EV kod imzalama sertifikasıyla imzalanmadığı için bazı antivirüsler, Chrome veya Windows SmartScreen onu işaretleyebilir. Bu, yeni ve imzasız uygulamaların çoğunu etkileyen yanlış bir alarmdır."
+    },
+    {
+      "q": "SteamTools nasıl kurulur?",
+      "a": "Sisteminize uygun SteamTools'u indirip çalıştırın; kurulum gerekmez. Tarayıcınız indirmeyi engellerse “İndirme engellendi mi?” penceresindeki PowerShell yükleyicisini kullanın."
+    },
+    {
+      "q": "Lua betikleri ve manifestler nedir?",
+      "a": "Lua betikleri ve depot manifestleri, SteamTools'un oyun eklemek ve güncellemek için kullandığı dosyalardır. Bunları birden fazla sağlayıcıyı tek yerde toplayan Manilua'dan (manilua.steamtools.app) ücretsiz alabilirsiniz."
+    },
+    {
+      "q": "SteamTools hangi sistemleri destekler?",
+      "a": "SteamTools, Windows ve Linux için kullanılabilir."
+    },
+    {
+      "q": "Nasıl yardım alırım veya hata bildiririm?",
+      "a": "Yardım almak, hata bildirmek ve güncellemeleri takip etmek için SteamTools Discord sunucusuna katılın."
+    }
+  ]
 }

@@ -22,6 +22,17 @@ const fill = (s: string) =>
 /** Split a heading into words for the word-by-word reveal (CJK headings stay one block). */
 const words = (s: string) => s.split(/\s+/);
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  inLanguage: locale.hreflang,
+  mainEntity: t.faq.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
+
 const featureIcons = ['gamepad', 'box', 'shield'] as const;
 const osList: Os[] = ['windows', 'linux'];
 const osIcon = { windows: 'windows', linux: 'terminal' } as const;
@@ -43,8 +54,9 @@ const brand = [...'SteamTools'];
     ))}
   </a>
 
-  <h1 aria-label="SteamTools">
+  <h1 aria-label={`SteamTools — ${t.heading}`}>
     {brand.map((c, i) => <span class="char" style={`--i:${i}`} aria-hidden="true">{c}</span>)}
+    <span class="h1-sub" aria-hidden="true">{t.heading}</span>
   </h1>
   <p class="lead">{t.tagline}</p>
 
@@ -113,7 +125,7 @@ const brand = [...'SteamTools'];
   </article>
 </section>
 
-<section class="wrap section section-last" id="download">
+<section class="wrap section" id="download">
   <header class="section-head" data-reveal>
     <span class="kicker">{t.download}</span>
     <h2>{words(t.platformsTitle).map((w, i, all) => <><span class="word" style={`--w:${i}`}>{w}</span>{i < all.length - 1 && ' '}</>)}</h2>
@@ -138,6 +150,22 @@ const brand = [...'SteamTools'];
     ))}
   </div>
 </section>
+
+<section class="wrap section section-last" id="faq">
+  <header class="section-head" data-reveal>
+    <span class="kicker">{t.navFaq}</span>
+    <h2>{words(t.faqTitle).map((w, i, all) => <><span class="word" style={`--w:${i}`}>{w}</span>{i < all.length - 1 && ' '}</>)}</h2>
+  </header>
+  <div class="faq" data-reveal>
+    {t.faq.map((item) => (
+      <details class="faq-item">
+        <summary>{item.q}</summary>
+        <p>{item.a}</p>
+      </details>
+    ))}
+  </div>
+</section>
+<script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
 
 <dialog class="blocked" id="blocked" aria-labelledby="blocked-title">
   <div class="blocked-card">

@@ -1,6 +1,6 @@
 {
   "title": "SteamTools — Unduhan Resmi | Perbaikan, Lua & Manifest",
-  "description": "Unduh SteamTools, toolkit Steam gratis dengan perbaikan game, penyedia Lua/Manifest, pembaruan manifest depot, dan build portabel. Dipercaya oleh 150.000+ gamer.",
+  "description": "Unduh SteamTools, toolkit Steam gratis dengan perbaikan game, penyedia Lua/Manifest, pembaruan manifest depot, dan build portabel. Mendukung 150.000+ game.",
   "tagline": "Toolkit Steam gratis: perbaikan game, penyedia Lua/Manifest, manifest depot, dan build portabel — semua dalam satu.",
   "download": "Unduh",
   "installer": "Unduh — Penginstal",
@@ -31,7 +31,7 @@
     },
     {
       "title": "Aman",
-      "text": "Build yang dihosting GitHub, terverifikasi dan ditandatangani di setiap rilis."
+      "text": "Build yang dihosting GitHub, terverifikasi di setiap rilis."
     }
   ],
   "footerSince": "© Sejak 2025 SteamTools",
@@ -56,5 +56,38 @@
     "SteamTools akan diunduh dari GitHub kami dan terbuka otomatis."
   ],
   "blockedClose": "Mengerti",
-  "blockedScript": "Lihat apa yang dilakukan perintah ini"
+  "blockedScript": "Lihat apa yang dilakukan perintah ini",
+  "heading": "Toolkit Steam gratis",
+  "navFaq": "FAQ",
+  "faqTitle": "Pertanyaan umum",
+  "faq": [
+    {
+      "q": "Apa itu SteamTools?",
+      "a": "SteamTools adalah toolkit Steam gratis yang menggabungkan perbaikan game, penyedia Lua/Manifest, pembaruan manifest depot, dan build portabel dalam satu aplikasi ringan."
+    },
+    {
+      "q": "Apakah SteamTools gratis?",
+      "a": "Ya. SteamTools sepenuhnya gratis untuk diunduh dan digunakan."
+    },
+    {
+      "q": "Apakah SteamTools aman? Kenapa antivirus saya menandainya?",
+      "a": "SteamTools dihosting di GitHub dan diverifikasi di setiap rilis. Beberapa antivirus, Chrome, atau Windows SmartScreen dapat menandainya karena aplikasi ini tidak ditandatangani dengan sertifikat penandatanganan kode EV. Ini adalah positif palsu yang dialami sebagian besar aplikasi baru yang belum ditandatangani."
+    },
+    {
+      "q": "Bagaimana cara memasang SteamTools?",
+      "a": "Unduh SteamTools untuk sistem Anda lalu jalankan — tidak perlu instalasi. Jika browser memblokir unduhan, gunakan installer PowerShell di jendela “Unduhan diblokir?”."
+    },
+    {
+      "q": "Apa itu skrip Lua dan manifest?",
+      "a": "Skrip Lua dan manifest depot adalah file yang digunakan SteamTools untuk menambahkan dan memperbarui game. Anda bisa mendapatkannya gratis di Manilua (manilua.steamtools.app), yang mengumpulkan beberapa penyedia di satu tempat."
+    },
+    {
+      "q": "Sistem apa saja yang didukung SteamTools?",
+      "a": "SteamTools tersedia untuk Windows dan Linux."
+    },
+    {
+      "q": "Bagaimana cara mendapatkan bantuan atau melaporkan bug?",
+      "a": "Bergabunglah dengan Discord SteamTools untuk mendapatkan bantuan, melaporkan bug, dan mengikuti pembaruan."
+    }
+  ]
 }

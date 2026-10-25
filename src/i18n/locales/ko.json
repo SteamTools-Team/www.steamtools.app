@@ -1,6 +1,6 @@
 {
   "title": "SteamTools — 공식 다운로드 | 게임 수정, Lua & Manifest",
-  "description": "SteamTools 무료 다운로드: 게임 수정, Lua/Manifest 프로바이더, 디포 매니페스트 업데이트, 휴대용 빌드가 포함된 무료 Steam 툴킷. 150,000명 이상의 게이머가 신뢰.",
+  "description": "SteamTools 무료 다운로드: 게임 수정, Lua/Manifest 프로바이더, 디포 매니페스트 업데이트, 휴대용 빌드가 포함된 무료 Steam 툴킷. 150,000개 이상의 게임 지원.",
   "tagline": "무료 Steam 툴킷: 게임 수정, Lua/Manifest 프로바이더, 디포 매니페스트, 휴대용 빌드 — 올인원.",
   "download": "다운로드",
   "installer": "다운로드 — 설치 프로그램",
@@ -31,7 +31,7 @@
     },
     {
       "title": "안전",
-      "text": "GitHub 호스팅 빌드, 모든 릴리스에서 검증 및 서명."
+      "text": "GitHub 호스팅 빌드, 모든 릴리스에서 검증."
     }
   ],
   "footerSince": "© 2025년부터 SteamTools",
@@ -56,5 +56,38 @@
     "SteamTools가 GitHub에서 다운로드되고 자동으로 실행됩니다."
   ],
   "blockedClose": "확인",
-  "blockedScript": "이 명령이 하는 일 보기"
+  "blockedScript": "이 명령이 하는 일 보기",
+  "heading": "무료 Steam 툴킷",
+  "navFaq": "FAQ",
+  "faqTitle": "자주 묻는 질문",
+  "faq": [
+    {
+      "q": "SteamTools란 무엇인가요?",
+      "a": "SteamTools는 게임 수정, Lua/Manifest 프로바이더, 디포 매니페스트 업데이트, 휴대용 빌드를 하나의 가벼운 앱에 담은 무료 Steam 툴킷입니다."
+    },
+    {
+      "q": "SteamTools는 무료인가요?",
+      "a": "네. SteamTools는 다운로드와 사용 모두 완전히 무료입니다."
+    },
+    {
+      "q": "SteamTools는 안전한가요? 백신이 왜 경고하나요?",
+      "a": "SteamTools는 GitHub에서 호스팅되며 릴리스마다 검증됩니다. 앱이 EV 코드 서명 인증서로 서명되지 않았기 때문에 일부 백신, Chrome 또는 Windows SmartScreen이 경고할 수 있습니다. 이는 서명되지 않은 대부분의 새 앱에서 발생하는 오탐입니다."
+    },
+    {
+      "q": "SteamTools는 어떻게 설치하나요?",
+      "a": "사용 중인 시스템용 SteamTools를 다운로드해 실행하면 됩니다. 설치는 필요 없습니다. 브라우저가 다운로드를 차단하면 '다운로드가 차단되었나요?' 창에 나오는 PowerShell 설치 프로그램을 사용하세요."
+    },
+    {
+      "q": "Lua 스크립트와 매니페스트란 무엇인가요?",
+      "a": "Lua 스크립트와 디포 매니페스트는 SteamTools가 게임을 추가하고 업데이트할 때 사용하는 파일입니다. 여러 프로바이더를 한곳에 모은 Manilua(manilua.steamtools.app)에서 무료로 받을 수 있습니다."
+    },
+    {
+      "q": "SteamTools는 어떤 시스템을 지원하나요?",
+      "a": "SteamTools는 Windows와 Linux에서 사용할 수 있습니다."
+    },
+    {
+      "q": "도움을 받거나 버그를 신고하려면 어떻게 하나요?",
+      "a": "SteamTools Discord에 참여해 도움을 받고, 버그를 신고하고, 업데이트 소식을 확인하세요."
+    }
+  ]
 }

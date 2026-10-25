@@ -1,6 +1,6 @@
 {
   "title": "SteamTools — Download ufficiale | Fix, Lua e Manifest",
-  "description": "Scarica SteamTools, il toolkit gratuito per Steam con correzioni di gioco, provider Lua/Manifest, aggiornamenti dei manifest di depot e build portatili. Scelto da oltre 150.000 giocatori.",
+  "description": "Scarica SteamTools, il toolkit gratuito per Steam con correzioni di gioco, provider Lua/Manifest, aggiornamenti dei manifest di depot e build portatili. Supporta oltre 150.000 giochi.",
   "tagline": "Il toolkit gratuito per Steam: correzioni di gioco, provider Lua/Manifest, manifest di depot e build portatili — tutto in uno.",
   "download": "Scarica",
   "installer": "Scarica — Installer",
@@ -31,7 +31,7 @@
     },
     {
       "title": "Sicuro",
-      "text": "Build ospitate su GitHub, verificate e firmate a ogni rilascio."
+      "text": "Build ospitate su GitHub, verificate a ogni rilascio."
     }
   ],
   "footerSince": "© Dal 2025 SteamTools",
@@ -56,5 +56,38 @@
     "SteamTools viene scaricato dal nostro GitHub e si apre automaticamente."
   ],
   "blockedClose": "Ho capito",
-  "blockedScript": "Vedi cosa fa questo comando"
+  "blockedScript": "Vedi cosa fa questo comando",
+  "heading": "Toolkit gratuito per Steam",
+  "navFaq": "FAQ",
+  "faqTitle": "Domande frequenti",
+  "faq": [
+    {
+      "q": "Che cos'è SteamTools?",
+      "a": "SteamTools è un toolkit gratuito per Steam che riunisce correzioni di gioco, un provider Lua/Manifest, aggiornamenti dei manifest di depot e build portatili in un'unica app leggera."
+    },
+    {
+      "q": "SteamTools è gratuito?",
+      "a": "Sì. SteamTools è completamente gratuito da scaricare e da usare."
+    },
+    {
+      "q": "SteamTools è sicuro? Perché il mio antivirus lo segnala?",
+      "a": "SteamTools è ospitato su GitHub e verificato a ogni rilascio. Alcuni antivirus, Chrome o Windows SmartScreen possono segnalarlo perché l'app non è firmata con un certificato di firma del codice EV. È un falso positivo che riguarda la maggior parte delle nuove app non firmate."
+    },
+    {
+      "q": "Come si installa SteamTools?",
+      "a": "Scarica SteamTools per il tuo sistema e avvialo: non serve installarlo. Se il browser blocca il download, usa l'installer PowerShell indicato nella finestra «Download bloccato?»."
+    },
+    {
+      "q": "Cosa sono gli script Lua e i manifest?",
+      "a": "Gli script Lua e i manifest di depot sono i file che SteamTools usa per aggiungere e aggiornare i giochi. Puoi ottenerli gratis su Manilua (manilua.steamtools.app), che riunisce più provider in un unico posto."
+    },
+    {
+      "q": "Quali sistemi supporta SteamTools?",
+      "a": "SteamTools è disponibile per Windows e Linux."
+    },
+    {
+      "q": "Come posso ricevere aiuto o segnalare un bug?",
+      "a": "Unisciti al Discord di SteamTools per ricevere aiuto, segnalare bug e seguire gli aggiornamenti."
+    }
+  ]
 }
