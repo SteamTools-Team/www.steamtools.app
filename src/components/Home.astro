@@ -39,12 +39,6 @@ const osIcon = { windows: 'windows', linux: 'terminal' } as const;
 const brand = [...'SteamTools'];
 ---
 <section class="wrap hero">
-  <div class="app-icon" data-tilt>
-    <div class="app-icon-inner">
-      <Image src={appIcon} alt="SteamTools" width={144} height={144} densities={[1, 2]} loading="eager" fetchpriority="high" />
-    </div>
-  </div>
-
   <a class="eyebrow" href="#download">
     <span class="dot" aria-hidden="true"></span>
     {osList.map((os) => (
@@ -54,10 +48,16 @@ const brand = [...'SteamTools'];
     ))}
   </a>
 
-  <h1 aria-label={`SteamTools — ${t.heading}`}>
-    {brand.map((c, i) => <span class="char" style={`--i:${i}`} aria-hidden="true">{c}</span>)}
-    <span class="h1-sub" aria-hidden="true">{t.heading}</span>
-  </h1>
+  <div class="hero-lockup">
+    <div class="app-icon" data-tilt>
+      <div class="app-icon-inner">
+        <Image src={appIcon} alt="SteamTools" width={144} height={144} densities={[1, 2]} loading="eager" fetchpriority="high" />
+      </div>
+    </div>
+    <h1 aria-label={`SteamTools — ${t.heading}`}>
+      {brand.map((c, i) => <span class="char" style={`--i:${i}`} aria-hidden="true">{c}</span>)}
+    </h1>
+  </div>
   <p class="lead">{t.tagline}</p>
 
   <div class="hero-actions">
