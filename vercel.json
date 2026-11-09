@@ -12,7 +12,7 @@
       "destination": "/:path+"
     },
     { "source": "/installer", "destination": "/installer.ps1" }
-    }
+    },
   ],
 
   "redirects": [
