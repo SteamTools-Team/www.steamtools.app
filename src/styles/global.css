@@ -140,14 +140,14 @@ html[data-os="linux"] [data-os-only="windows"] { display: none !important; }
   content: ""; position: absolute; inset: 0;
   background-image: url("/assets/logo.svg");
   background-repeat: repeat;
-  background-size: 107px 120px;
+  background-size: 112px 112px;
   opacity: 0.035;
   will-change: background-position;
   animation: patternSlide 20s linear infinite;
 }
 @keyframes patternSlide {
   0%   { background-position: 0 0; }
-  100% { background-position: 107px -120px; }
+  100% { background-position: 112px -112px; }
 }
 
 /* ── Navigation ─────────────────────────────────────────────── */
@@ -463,7 +463,7 @@ html[data-os="linux"] [data-os-only="windows"] { display: none !important; }
   content: "";
   position: absolute; z-index: -1;
   inset-inline-end: -5%; top: 50%;
-  width: min(300px, 50%); aspect-ratio: 185.59 / 208.73;
+  width: min(300px, 50%); aspect-ratio: 1;
   transform: translateY(-50%);
   background: url("/assets/logo.svg") center / contain no-repeat;
   opacity: 0.07;
