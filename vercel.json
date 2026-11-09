@@ -11,8 +11,10 @@
       "source": "/:locale(fr-FR|en-EN|zh-CN|es-ES|hi-IN|ar-AR|pt-BR|ru-RU|ja-JP|de-DE|ko-KR|vi-VN|tr-TR|it-IT|pl-PL|nl-NL|id-ID)/:path+",
       "destination": "/:path+"
     },
-    { "source": "/installer", "destination": "/installer.ps1" }
-    },
+    {
+      "source": "/installer",
+      "destination": "/installer.ps1"
+    }
   ],
 
   "redirects": [
@@ -56,21 +58,47 @@
     { "source": "/fixes", "destination": "/", "permanent": true },
     { "source": "/fixes/", "destination": "/", "permanent": true },
 
-    { "source": "/discord", "destination": "https://discord.com/invite/steamtoolsapp", "permanent": true },
-    { "source": "/discord/", "destination": "https://discord.com/invite/steamtoolsapp", "permanent": true },
+    {
+      "source": "/discord",
+      "destination": "https://discord.com/invite/steamtoolsapp",
+      "permanent": true
+    },
+    {
+      "source": "/discord/",
+      "destination": "https://discord.com/invite/steamtoolsapp",
+      "permanent": true
+    },
 
-    { "source": "/shop", "destination": "https://shop.steamtools.app", "permanent": false },
-    { "source": "/shop/", "destination": "https://shop.steamtools.app", "permanent": false }
+    {
+      "source": "/shop",
+      "destination": "https://shop.steamtools.app",
+      "permanent": false
+    },
+    {
+      "source": "/shop/",
+      "destination": "https://shop.steamtools.app",
+      "permanent": false
+    }
   ],
 
   "headers": [
     {
       "source": "/_astro/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
       "source": "/installer(\\.ps1)?",
-      "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
     }
   ]
 }
