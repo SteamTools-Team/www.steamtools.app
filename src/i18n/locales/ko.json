@@ -48,15 +48,6 @@
   "manifestCta": "Manilua 열기",
   "manifestProviders": "제공자",
   "manifestMore": "외 다수",
-  "blockedTitle": "다운로드가 차단되었나요?",
-  "blockedText": "Chrome 또는 Windows SmartScreen이 SteamTools를 바이러스로 감지할 수 있습니다. 이는 오탐입니다. SteamTools는 오픈 소스이지만, EV 코드 서명 인증서로 서명되어 있지 않습니다. 인증서가 없으면 새로운 서명되지 않은 앱은 기본적으로 차단됩니다.",
-  "blockedSteps": [
-    "시작 메뉴에서 “PowerShell”을 검색하고 마우스 오른쪽 버튼을 클릭한 뒤 “관리자 권한으로 실행”을 선택합니다.",
-    "이 명령을 붙여넣고 Enter 키를 누르세요:",
-    "SteamTools가 GitHub에서 다운로드되고 자동으로 실행됩니다."
-  ],
-  "blockedClose": "확인",
-  "blockedScript": "이 명령이 하는 일 보기",
   "heading": "무료 Steam 툴킷",
   "navFaq": "FAQ",
   "faqTitle": "자주 묻는 질문",
@@ -75,7 +66,7 @@
     },
     {
       "q": "SteamTools는 어떻게 설치하나요?",
-      "a": "사용 중인 시스템용 SteamTools를 다운로드해 실행하면 됩니다. 설치는 필요 없습니다. 브라우저가 다운로드를 차단하면 '다운로드가 차단되었나요?' 창에 나오는 PowerShell 설치 프로그램을 사용하세요."
+      "a": "사용 중인 시스템용 SteamTools를 다운로드해 실행하면 됩니다. 설치는 필요 없습니다."
     },
     {
       "q": "Lua 스크립트와 매니페스트란 무엇인가요?",

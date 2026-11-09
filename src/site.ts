@@ -24,9 +24,6 @@ export const links = {
 /** Where /discord redirects (vercel.json); used as the brand profile in structured data. */
 export const discordInvite = 'https://discord.com/invite/steamtoolsapp';
 
-/** PowerShell one-liner shown when the browser blocks the Windows download (served from public/installer.ps1). */
-export const installCommand = 'irm https://www.steamtools.app/installer | iex';
-export const installScript = '/installer.ps1';
 
 /** Shown on the Manilua card. */
 export const manifestProviders = ['SteamTools.app', 'DepotBox', 'Hubcap', 'Ryuu'];

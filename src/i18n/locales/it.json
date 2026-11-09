@@ -48,15 +48,6 @@
   "manifestCta": "Apri Manilua",
   "manifestProviders": "Provider",
   "manifestMore": "e altri",
-  "blockedTitle": "Download bloccato?",
-  "blockedText": "Chrome o Windows SmartScreen possono segnalare SteamTools come virus. È un falso positivo: SteamTools è open source, ma non è firmato con un certificato EV. Senza di esso, ogni nuova app non firmata viene bloccata per impostazione predefinita.",
-  "blockedSteps": [
-    "Cerca “PowerShell” nel menu Start, fai clic destro e scegli “Esegui come amministratore”.",
-    "Incolla questo comando e premi Invio:",
-    "SteamTools viene scaricato dal nostro GitHub e si apre automaticamente."
-  ],
-  "blockedClose": "Ho capito",
-  "blockedScript": "Vedi cosa fa questo comando",
   "heading": "Toolkit gratuito per Steam",
   "navFaq": "FAQ",
   "faqTitle": "Domande frequenti",
@@ -75,7 +66,7 @@
     },
     {
       "q": "Come si installa SteamTools?",
-      "a": "Scarica SteamTools per il tuo sistema e avvialo: non serve installarlo. Se il browser blocca il download, usa l'installer PowerShell indicato nella finestra «Download bloccato?»."
+      "a": "Scarica SteamTools per il tuo sistema e avvialo: non serve installarlo."
     },
     {
       "q": "Cosa sono gli script Lua e i manifest?",

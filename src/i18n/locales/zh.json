@@ -48,15 +48,6 @@
   "manifestCta": "打开 Manilua",
   "manifestProviders": "提供源",
   "manifestMore": "更多",
-  "blockedTitle": "下载被拦截？",
-  "blockedText": "Chrome 或 Windows SmartScreen 可能会将 SteamTools 识别为病毒。这是误报：SteamTools 是开源项目，但没有使用 EV 代码签名证书。没有该证书，任何新的未签名应用都会被默认拦截。",
-  "blockedSteps": [
-    "在“开始”菜单中搜索“PowerShell”，右键单击并选择“以管理员身份运行”。",
-    "粘贴以下命令并按 Enter：",
-    "SteamTools 将从我们的 GitHub 下载并自动打开。"
-  ],
-  "blockedClose": "知道了",
-  "blockedScript": "查看此命令的作用",
   "heading": "免费 Steam 工具包",
   "navFaq": "常见问题",
   "faqTitle": "常见问题",
@@ -75,7 +66,7 @@
     },
     {
       "q": "如何安装 SteamTools？",
-      "a": "下载适合你系统的 SteamTools 并直接运行，无需安装。如果浏览器拦截了下载，请使用“下载被拦截？”窗口中的 PowerShell 安装命令。"
+      "a": "下载适合你系统的 SteamTools 并直接运行，无需安装。"
     },
     {
       "q": "什么是 Lua 脚本和清单？",

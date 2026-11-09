@@ -48,15 +48,6 @@
   "manifestCta": "Manilua’yı aç",
   "manifestProviders": "Sağlayıcılar",
   "manifestMore": "ve daha fazlası",
-  "blockedTitle": "İndirme engellendi mi?",
-  "blockedText": "Chrome veya Windows SmartScreen, SteamTools’u virüs olarak işaretleyebilir. Bu bir yanlış alarm: SteamTools açık kaynaklıdır ancak bir EV kod imzalama sertifikasıyla imzalanmamıştır. Bu sertifika olmadan her yeni imzasız uygulama varsayılan olarak engellenir.",
-  "blockedSteps": [
-    "Başlat menüsünde “PowerShell” arayın, sağ tıklayın ve “Yönetici olarak çalıştır”ı seçin.",
-    "Bu komutu yapıştırın ve Enter’a basın:",
-    "SteamTools GitHub’ımızdan indirilir ve otomatik olarak açılır."
-  ],
-  "blockedClose": "Anladım",
-  "blockedScript": "Bu komutun ne yaptığını gör",
   "heading": "Ücretsiz Steam araç takımı",
   "navFaq": "SSS",
   "faqTitle": "Sık sorulan sorular",
@@ -75,7 +66,7 @@
     },
     {
       "q": "SteamTools nasıl kurulur?",
-      "a": "Sisteminize uygun SteamTools'u indirip çalıştırın; kurulum gerekmez. Tarayıcınız indirmeyi engellerse “İndirme engellendi mi?” penceresindeki PowerShell yükleyicisini kullanın."
+      "a": "Sisteminize uygun SteamTools'u indirip çalıştırın; kurulum gerekmez."
     },
     {
       "q": "Lua betikleri ve manifestler nedir?",

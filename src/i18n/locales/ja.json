@@ -48,15 +48,6 @@
   "manifestCta": "Manilua を開く",
   "manifestProviders": "プロバイダー",
   "manifestMore": "ほか",
-  "blockedTitle": "ダウンロードがブロックされましたか？",
-  "blockedText": "Chrome や Windows SmartScreen が SteamTools をウイルスとして検出することがあります。これは誤検知です。SteamTools はオープンソースですが、EV コード署名証明書で署名されていません。証明書のない新しいアプリは、既定でブロックされます。",
-  "blockedSteps": [
-    "スタートメニューで「PowerShell」を検索し、右クリックして「管理者として実行」を選びます。",
-    "次のコマンドを貼り付けて Enter を押します：",
-    "SteamTools が GitHub からダウンロードされ、自動的に起動します。"
-  ],
-  "blockedClose": "わかりました",
-  "blockedScript": "このコマンドの内容を見る",
   "heading": "無料の Steam ツールキット",
   "navFaq": "よくある質問",
   "faqTitle": "よくある質問",
@@ -75,7 +66,7 @@
     },
     {
       "q": "SteamTools のインストール方法は？",
-      "a": "お使いのシステム用の SteamTools をダウンロードして起動するだけで、インストールは不要です。ブラウザーがダウンロードをブロックした場合は、「ダウンロードがブロックされましたか？」ウィンドウに表示される PowerShell インストーラーを使ってください。"
+      "a": "お使いのシステム用の SteamTools をダウンロードして起動するだけで、インストールは不要です。"
     },
     {
       "q": "Lua スクリプトとマニフェストとは？",

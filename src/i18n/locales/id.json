@@ -48,15 +48,6 @@
   "manifestCta": "Buka Manilua",
   "manifestProviders": "Penyedia",
   "manifestMore": "dan lainnya",
-  "blockedTitle": "Unduhan diblokir?",
-  "blockedText": "Chrome atau Windows SmartScreen mungkin mendeteksi SteamTools sebagai virus. Ini adalah positif palsu: SteamTools bersifat open source, tetapi tidak ditandatangani dengan sertifikat EV. Tanpa sertifikat itu, setiap aplikasi baru yang tidak ditandatangani diblokir secara default.",
-  "blockedSteps": [
-    "Cari “PowerShell” di menu Start, klik kanan, lalu pilih “Run as administrator”.",
-    "Tempel perintah ini lalu tekan Enter:",
-    "SteamTools akan diunduh dari GitHub kami dan terbuka otomatis."
-  ],
-  "blockedClose": "Mengerti",
-  "blockedScript": "Lihat apa yang dilakukan perintah ini",
   "heading": "Toolkit Steam gratis",
   "navFaq": "FAQ",
   "faqTitle": "Pertanyaan umum",
@@ -75,7 +66,7 @@
     },
     {
       "q": "Bagaimana cara memasang SteamTools?",
-      "a": "Unduh SteamTools untuk sistem Anda lalu jalankan — tidak perlu instalasi. Jika browser memblokir unduhan, gunakan installer PowerShell di jendela “Unduhan diblokir?”."
+      "a": "Unduh SteamTools untuk sistem Anda lalu jalankan — tidak perlu instalasi."
     },
     {
       "q": "Apa itu skrip Lua dan manifest?",

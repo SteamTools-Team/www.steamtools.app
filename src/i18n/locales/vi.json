@@ -48,15 +48,6 @@
   "manifestCta": "Mở Manilua",
   "manifestProviders": "Nhà cung cấp",
   "manifestMore": "và hơn nữa",
-  "blockedTitle": "Tải xuống bị chặn?",
-  "blockedText": "Chrome hoặc Windows SmartScreen có thể nhận diện SteamTools là virus. Đây là cảnh báo sai: SteamTools là mã nguồn mở, nhưng không được ký bằng chứng chỉ EV. Không có nó, mọi ứng dụng mới chưa ký đều bị chặn theo mặc định.",
-  "blockedSteps": [
-    "Tìm “PowerShell” trong menu Start, nhấp chuột phải và chọn “Run as administrator”.",
-    "Dán lệnh này và nhấn Enter:",
-    "SteamTools sẽ được tải từ GitHub của chúng tôi và tự động mở."
-  ],
-  "blockedClose": "Đã hiểu",
-  "blockedScript": "Xem lệnh này làm gì",
   "heading": "Bộ công cụ Steam miễn phí",
   "navFaq": "FAQ",
   "faqTitle": "Câu hỏi thường gặp",
@@ -75,7 +66,7 @@
     },
     {
       "q": "Cài đặt SteamTools như thế nào?",
-      "a": "Tải SteamTools cho hệ điều hành của bạn và chạy — không cần cài đặt. Nếu trình duyệt chặn tải xuống, hãy dùng trình cài đặt PowerShell trong cửa sổ “Tải xuống bị chặn?”."
+      "a": "Tải SteamTools cho hệ điều hành của bạn và chạy — không cần cài đặt."
     },
     {
       "q": "Script Lua và manifest là gì?",
